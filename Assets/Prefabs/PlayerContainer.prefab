@@ -186,7 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   <CharacterController>k__BackingField: {fileID: 6386071743864434201}
-  <Camera>k__BackingField: {fileID: 1121217197668448888}
   <Speed>k__BackingField: 5
   <LookSensitivity>k__BackingField: {x: 0.1, y: 0.1}
   <TurnSpeed>k__BackingField: 30
@@ -205,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
   <PlayerInput>k__BackingField: {fileID: 6913665081302795656}
   <Movement>k__BackingField: {fileID: 5314641150389197040}
+  <Camera>k__BackingField: {fileID: 1121217197668448888}
 --- !u!114 &6913665081302795656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: c2c9ae98f249f7d4d8534cc0df44bb99, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 31c6ef648cfac4a4cb000cc6b336faee, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 4709400242647008311}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:

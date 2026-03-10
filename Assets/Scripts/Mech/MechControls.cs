@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Movement))]
@@ -10,50 +11,57 @@ public class MechControls : MonoBehaviour
     [SerializeField] private Transform _torso;
     [SerializeField] private Transform _legs;
     [SerializeField] private float _matchTorsoAndLegsSpeed = 40.0f;
+    private bool _isRotating = false;
 
     private void OnValidate()
     {
         if(_movement == null) _movement = GetComponent<Movement>();
     }
 
-    private void Update()
+    public void MoveForward()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            _movement.SetMoveInput(_legs.transform.forward);
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            _movement.SetMoveInput(-_legs.transform.forward);
-        }
-        if (Input.GetKey(KeyCode.J))
-        {
-            _movement.RotateXPosAtSpeed(_torso, _movement.TurnSpeed);
-        }
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-            _movement.EndRotation();
-        }
-        if (Input.GetKey(KeyCode.L))
-        {
-            _movement.RotateXPosAtSpeed(_torso, - _movement.TurnSpeed);
-        }
-        if (Input.GetKeyUp(KeyCode.L))
-        {
-            _movement.EndRotation();
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            _movement.SetMoveInput(new Vector3(0, 0, 0));
-        }
-        if (Input.GetKeyUp(KeyCode.P))
-        {
-            OrientLegsToTorso();
-        }
+        _movement.SetMoveInput(_legs.transform.forward);
     }
 
-    private void OrientLegsToTorso()
+    public void MoveBackward()
+    {
+        _movement.SetMoveInput(-_legs.transform.forward);
+    }
+
+    public void RotateLeft()
+    {
+        _isRotating = true;
+        StartCoroutine(RotationRoutine(_torso, -_movement.TurnSpeed));
+    }
+
+    public void RotateRight()
+    {
+        _isRotating = true;
+        StartCoroutine(RotationRoutine(_torso, _movement.TurnSpeed));
+    }
+
+    public void EndRotation(int punchDir)
+    {
+        _isRotating = false;
+        _movement.EndRotation(punchDir);
+    }
+
+    public void StopMovement()
+    {
+        _movement.SetMoveInput(new Vector3(0, 0, 0));
+    }
+
+    public void OrientLegsToTorso()
     {
         _movement.MatchTransformRotations(_torso, _legs, _matchTorsoAndLegsSpeed);
+    }
+
+    private IEnumerator RotationRoutine(Transform targetTransform, float speed)
+    {
+        while (_isRotating)
+        {
+            _movement.RotateXPosAtSpeed(targetTransform, speed);
+            yield return null;
+        }
     }
 }

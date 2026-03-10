@@ -18,7 +18,8 @@ public class Movement : MonoBehaviour
     [Tooltip("Only used when want to rotate specific object at speed")]
     [field: SerializeField] public float TurnSpeed { get; private set; } = 30.0f;
     [field: SerializeField] public float EndRotationSpeed { get; private set; } = 60.0f;
-    [field: SerializeField] public ShakeSettings EndShakeSettings { get; private set; }
+    [field: SerializeField] public ShakeSettings EndShakeSettingsLeft { get; private set; }
+    [field: SerializeField] public ShakeSettings EndShakeSettingRight { get; private set; }
     [field: SerializeField] public float MaxPitch { get; private set; } = 85.0f;
     private float _currentPitch = 0.0f;
     
@@ -60,7 +61,7 @@ public class Movement : MonoBehaviour
 
     public void RotateXPosAtSpeed(Transform targetTransform, float speed)
     {
-        targetTransform.Rotate(Vector3.up * speed * Time.fixedDeltaTime);
+        targetTransform.Rotate(Vector3.up * speed * Time.deltaTime);
     }
 
     public void MatchTransformRotations(Transform anchorTransform, Transform movingTransform, float speed)
@@ -68,9 +69,16 @@ public class Movement : MonoBehaviour
         Tween.LocalRotationAtSpeed(movingTransform, anchorTransform.localRotation, speed);
     }
 
-    public void EndRotation()
+    public void EndRotation(int punchDir)
     {
-        Tween.ShakeLocalRotation(transform, EndShakeSettings);
+        if(punchDir <= 0)
+        {
+            Tween.PunchLocalRotation(transform, EndShakeSettingsLeft);
+        }
+        else
+        {
+            Tween.PunchLocalRotation(transform, EndShakeSettingRight);
+        }
     }
 
     public void SetMoveInput(Vector3 input)

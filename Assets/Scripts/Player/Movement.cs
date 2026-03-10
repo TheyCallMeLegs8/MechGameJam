@@ -14,6 +14,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody _rigidBody;
 
     [SerializeField] private float _speed = 5.0f;
+    [SerializeField] private float _turnSpeed = 30.0f;
+    [SerializeField] private float _turnSpeedMultiplier = 1.0f;
 
     private Vector2 _moveInput2D;
     private bool _hasMoveInput = false;
@@ -45,13 +47,13 @@ public class Movement : MonoBehaviour
 
         // send move input to movement component
         SetMoveInput(moveInput3D);
-        SetLookDirection(moveInput3D);
-
+        //SetLookDirection(moveInput3D);
+        SetLookDirection(Camera.main.transform.forward);
         if (_hasTurnInput)
         {
-            Quaternion rotation = transform.rotation;
+            Quaternion rotation = _rigidBody.rotation;
             Quaternion targetRotation = Quaternion.LookRotation(_lookDirection);
-            rotation = Quaternion.Slerp(transform.rotation, targetRotation, 30 * 1 * Time.deltaTime);
+            rotation = Quaternion.Slerp(transform.rotation, targetRotation, _turnSpeed * _turnSpeedMultiplier * Time.deltaTime);
             _rigidBody.MoveRotation(rotation);
         }
         _characterController.Move(moveInput3D * _speed * Time.deltaTime);

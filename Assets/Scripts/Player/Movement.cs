@@ -1,4 +1,7 @@
+using PrimeTween;
+using System.Collections;
 using System.Text.RegularExpressions;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,10 +15,30 @@ public class Movement : MonoBehaviour
     [SerializeField] private CharacterController _characterController;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private Rigidbody _rigidBody;
+    [SerializeField] private CinemachineCamera _camera;
 
     [SerializeField] private float _speed = 5.0f;
     [SerializeField] private float _turnSpeed = 30.0f;
     [SerializeField] private float _turnSpeedMultiplier = 1.0f;
+    [SerializeField] private int _targetFPS = -1;
+
+    [Space]
+    [SerializeField] private Vector2 _lookSensitivity = new Vector2(0.1f, 0.1f);
+    [SerializeField] private float _maxPitch = 85.0f;
+    [SerializeField] private float _lookX;
+    private Vector2 _lookInput;
+    private float _currentPitch = 0.0f;
+    public float CurrentPitch
+    {
+        get => _currentPitch;
+
+        set
+        {
+            _currentPitch = Mathf.Clamp(value, -_maxPitch, _maxPitch);
+        }
+    }
+
+    private bool _canLookTEST = true;
 
     private Vector2 _moveInput2D;
     private bool _hasMoveInput = false;
@@ -23,8 +46,14 @@ public class Movement : MonoBehaviour
     private Vector3 _localMoveInput;
 
     private Vector3 _lookDirection;
-    private float _lookX;
     private bool _hasTurnInput = false;
+
+    private void Start()
+    {
+        Application.targetFrameRate = _targetFPS;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     private void OnValidate()
     {
@@ -35,6 +64,11 @@ public class Movement : MonoBehaviour
     public void OnMove(InputValue inputValue)
     {
         _moveInput2D = inputValue.Get<Vector2>();
+    }
+
+    public void OnLook(InputValue inputValue)
+    {
+        _lookInput = inputValue.Get<Vector2>();
     }
 
     private void Update()
@@ -48,6 +82,20 @@ public class Movement : MonoBehaviour
         // send move input to movement component
         SetMoveInput(moveInput3D);
         //SetLookDirection(moveInput3D);
+
+        //LookUpdate(_turnSpeed);
+
+        if (Input.GetKey(KeyCode.M))
+        {
+            _canLookTEST = true;
+            //StartCoroutine(LookWithSpeed());
+        }
+        else
+        {
+            _canLookTEST = false;
+        }
+
+        /*
         SetLookDirection(Camera.main.transform.forward);
         if (_hasTurnInput)
         {
@@ -55,12 +103,39 @@ public class Movement : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(_lookDirection);
             rotation = Quaternion.Slerp(transform.rotation, targetRotation, _turnSpeed * _turnSpeedMultiplier * Time.deltaTime);
             _rigidBody.MoveRotation(rotation);
-        }
-        _characterController.Move(moveInput3D * _speed * Time.deltaTime);
+        }*/
     }
 
     private void FixedUpdate()
     {
+        _characterController.Move(_moveInput * _speed * Time.deltaTime);
+        if (_canLookTEST)
+        {
+            
+        }
+        LookUpdate(_turnSpeed);
+    }
+
+    private void LookUpdate(float speed)
+    {
+        Vector2 input = new Vector2(_lookInput.x * _lookSensitivity.x, _lookInput.y * _lookSensitivity.y);
+        // handles look up and down
+        CurrentPitch -= input.y;
+        _camera.transform.localRotation = Quaternion.Euler(CurrentPitch, 0f, 0f);
+
+        Debug.Log(input);
+        // handles look left and right, SHOULD BE INPUT.X IN HERE
+        transform.Rotate(Vector3.up * input.x);
+        //transform.Rotate(Vector3.up * speed * Time.fixedDeltaTime);
+    }
+
+    private IEnumerator LookWithSpeed()
+    {
+        while (_canLookTEST)
+        {
+            LookUpdate(_turnSpeed);
+            yield return null;
+        }
     }
 
     private void SetMoveInput(Vector3 input)

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6386071743864434201}
   - component: {fileID: 4586538134210758370}
   - component: {fileID: 5314641150389197040}
+  - component: {fileID: 5443131471553391556}
   - component: {fileID: 6913665081302795656}
   m_Layer: 0
   m_Name: Player
@@ -184,16 +185,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13af2e8927bd6ce4e97b638d0660b76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  _characterController: {fileID: 6386071743864434201}
-  _playerInput: {fileID: 6913665081302795656}
-  _rigidBody: {fileID: 4586538134210758370}
-  _camera: {fileID: 1121217197668448888}
-  _speed: 5
-  _turnSpeed: 30
-  _turnSpeedMultiplier: 30
-  _targetFPS: -1
-  _lookSensitivity: {x: 0.1, y: 0.1}
-  _maxPitch: 85
+  <CharacterController>k__BackingField: {fileID: 6386071743864434201}
+  <Camera>k__BackingField: {fileID: 1121217197668448888}
+  <Speed>k__BackingField: 5
+  <LookSensitivity>k__BackingField: {x: 0.1, y: 0.1}
+  <TurnSpeed>k__BackingField: 30
+  <MaxPitch>k__BackingField: 85
+--- !u!114 &5443131471553391556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341334365443013399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c7aedee40ee544a518b69b62dbb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
+  <PlayerInput>k__BackingField: {fileID: 6913665081302795656}
+  <Movement>k__BackingField: {fileID: 5314641150389197040}
 --- !u!114 &6913665081302795656
 MonoBehaviour:
   m_ObjectHideFlags: 0

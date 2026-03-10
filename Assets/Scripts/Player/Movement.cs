@@ -1,171 +1,102 @@
-using PrimeTween;
-using System.Collections;
-using System.Text.RegularExpressions;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]
 
 public class Movement : MonoBehaviour
 {
     [Header("Componenets")]
-    [SerializeField] private CharacterController _characterController;
-    [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private Rigidbody _rigidBody;
-    [SerializeField] private CinemachineCamera _camera;
+    [field: SerializeField] public CharacterController CharacterController { get; private set; }
+    [field: SerializeField] public CinemachineCamera Camera { get; private set; }
 
-    [SerializeField] private float _speed = 5.0f;
-    [SerializeField] private float _turnSpeed = 30.0f;
-    [SerializeField] private float _turnSpeedMultiplier = 1.0f;
-    [SerializeField] private int _targetFPS = -1;
+    [Header("Locomotion")]
+    [field: SerializeField] public float Speed { get; private set; } = 5.0f;
 
-    [Space]
-    [SerializeField] private Vector2 _lookSensitivity = new Vector2(0.1f, 0.1f);
-    [SerializeField] private float _maxPitch = 85.0f;
-    [SerializeField] private float _lookX;
-    private Vector2 _lookInput;
+    [Header("Rotation")]
+    [field:SerializeField] public Vector2 LookSensitivity { get; private set; } = new Vector2(0.1f, 0.1f);
+    [Tooltip("Only used when want to rotate specific object at speed")]
+    [field: SerializeField] public float TurnSpeed { get; private set; } = 30.0f;
+    [field: SerializeField] public float MaxPitch { get; private set; } = 85.0f;
+    public Vector2 LookInput { get; private set; }
     private float _currentPitch = 0.0f;
+    
     public float CurrentPitch
     {
         get => _currentPitch;
 
         set
         {
-            _currentPitch = Mathf.Clamp(value, -_maxPitch, _maxPitch);
+            _currentPitch = Mathf.Clamp(value, -MaxPitch, MaxPitch);
         }
     }
 
-    private bool _canLookTEST = true;
-
-    private Vector2 _moveInput2D;
-    private bool _hasMoveInput = false;
-    private Vector3 _moveInput;
-    private Vector3 _localMoveInput;
-
-    private Vector3 _lookDirection;
-    private bool _hasTurnInput = false;
-
-    private void Start()
-    {
-        Application.targetFrameRate = _targetFPS;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+    public Vector2 MoveInput2D { get; private set; }
+    public bool HasMoveInput { get; private set; } = false;
+    public Vector3 MoveInput { get; private set; }
+    public Vector3 LocalMoveInput { get; private set; }
 
     private void OnValidate()
     {
-        if (_characterController == null) _characterController = GetComponent<CharacterController>();
-        if (_rigidBody == null) _rigidBody = GetComponent<Rigidbody>();
+        if (CharacterController == null) CharacterController = GetComponent<CharacterController>();
     }
 
-    public void OnMove(InputValue inputValue)
+    public void SetMoveInput2D(Vector2 input)
     {
-        _moveInput2D = inputValue.Get<Vector2>();
+        MoveInput2D = input;
     }
 
-    public void OnLook(InputValue inputValue)
+    public void SetLookInput(Vector2 input)
     {
-        _lookInput = inputValue.Get<Vector2>();
+        LookInput = input;
     }
 
     private void Update()
     {
         // map 2D input to 3D space before moving character
-        Vector3 right = Camera.main.transform.right; // thumb
+        Vector3 right = UnityEngine.Camera.main.transform.right; // thumb
         Vector3 up = Vector3.up;                     // pointer finger
         Vector3 forward = Vector3.Cross(right, up);  // middle finger
-        Vector3 moveInput3D = forward * _moveInput2D.y + right * _moveInput2D.x;
+        Vector3 moveInput3D = forward * MoveInput2D.y + right * MoveInput2D.x;
 
         // send move input to movement component
         SetMoveInput(moveInput3D);
-        //SetLookDirection(moveInput3D);
-
-        //LookUpdate(_turnSpeed);
-
-        if (Input.GetKey(KeyCode.M))
-        {
-            _canLookTEST = true;
-            //StartCoroutine(LookWithSpeed());
-        }
-        else
-        {
-            _canLookTEST = false;
-        }
-
-        /*
-        SetLookDirection(Camera.main.transform.forward);
-        if (_hasTurnInput)
-        {
-            Quaternion rotation = _rigidBody.rotation;
-            Quaternion targetRotation = Quaternion.LookRotation(_lookDirection);
-            rotation = Quaternion.Slerp(transform.rotation, targetRotation, _turnSpeed * _turnSpeedMultiplier * Time.deltaTime);
-            _rigidBody.MoveRotation(rotation);
-        }*/
     }
 
     private void FixedUpdate()
     {
-        _characterController.Move(_moveInput * _speed * Time.deltaTime);
-        if (_canLookTEST)
-        {
-            
-        }
-        LookUpdate(_turnSpeed);
+        CharacterController.Move(MoveInput * Speed * Time.deltaTime);
+        LookUpdate();
     }
 
-    private void LookUpdate(float speed)
+    public void LookUpdate()
     {
-        Vector2 input = new Vector2(_lookInput.x * _lookSensitivity.x, _lookInput.y * _lookSensitivity.y);
+        Vector2 input = new Vector2(LookInput.x * LookSensitivity.x, LookInput.y * LookSensitivity.y);
         // handles look up and down
         CurrentPitch -= input.y;
-        _camera.transform.localRotation = Quaternion.Euler(CurrentPitch, 0f, 0f);
+        Camera.transform.localRotation = Quaternion.Euler(CurrentPitch, 0f, 0f);
 
         Debug.Log(input);
-        // handles look left and right, SHOULD BE INPUT.X IN HERE
         transform.Rotate(Vector3.up * input.x);
-        //transform.Rotate(Vector3.up * speed * Time.fixedDeltaTime);
     }
 
-    private IEnumerator LookWithSpeed()
+    public void RotateXAtSpeed(float speed)
     {
-        while (_canLookTEST)
-        {
-            LookUpdate(_turnSpeed);
-            yield return null;
-        }
+        transform.Rotate(Vector3.up * speed * Time.fixedDeltaTime);
     }
 
-    private void SetMoveInput(Vector3 input)
+    public void SetMoveInput(Vector3 input)
     {
         input = Vector3.ClampMagnitude(input, 1f);
         // set input to 0 if small incoming value
-        _hasMoveInput = input.magnitude > 0.1f;
-        input = _hasMoveInput ? input : Vector3.zero;
+        HasMoveInput = input.magnitude > 0.1f;
+        input = HasMoveInput ? input : Vector3.zero;
         // remove y component of movement but retain overall magnitude
         Vector3 flattened = new Vector3(input.x, 0f, input.z);
         flattened = flattened.normalized * input.magnitude;
-        _moveInput = flattened;
+        MoveInput = flattened;
         // finds movement input as local direction rather than world direction
-        _localMoveInput = transform.InverseTransformDirection(_moveInput);
-    }
-
-    public void SetLookDirection(Vector3 direction)
-    {
-        if (direction.magnitude < 0.1f)
-        {
-            _hasTurnInput = false;
-            return;
-        }
-        _hasTurnInput = true;
-        _lookDirection = new Vector3(direction.x, 0f, direction.z).normalized;
-    }
-
-    public void SetLookPosition(Vector3 position)
-    {
-        Vector3 direction = Vector3.ClampMagnitude(position - transform.position, 1f);
-        SetLookDirection(direction);
+        LocalMoveInput = transform.InverseTransformDirection(MoveInput);
     }
 }

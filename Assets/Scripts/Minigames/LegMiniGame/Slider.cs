@@ -4,7 +4,8 @@ using UnityEngine;
 public class Slider : MonoBehaviour, IInteractable
 {
     [SerializeField] private List<Clamp> _clamps = new List<Clamp>();
-    [SerializeField] private Vector3 _disposePosition;
+    [SerializeField] private Transform _disposePosition;
+    [SerializeField] private GameObject _sliderMesh;
     [SerializeField] private GameObject _brokenMarker;
     
     private int _totalClamps;
@@ -37,6 +38,12 @@ public class Slider : MonoBehaviour, IInteractable
         _brokenMarker.SetActive(true);
     }
 
+    public void SetFixed()
+    {
+        _isBroken = false;
+        _brokenMarker.SetActive(false);
+    }
+
     private void SubtractClamp()
     {
         _totalClamps--;
@@ -53,7 +60,7 @@ public class Slider : MonoBehaviour, IInteractable
     {
         if (_isClamped) return;
         if (_isDisposed) return;
-        transform.localPosition = _disposePosition;
+        transform.localPosition = _disposePosition.position;
         _isDisposed = true;
     }
 

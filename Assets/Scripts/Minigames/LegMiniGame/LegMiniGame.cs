@@ -3,37 +3,46 @@ using UnityEngine;
 
 public class LegMiniGame : MiniGameBase
 {
-    [SerializeField] private List<Slider> _sliders = new List<Slider>();
+    [SerializeField] private Slider[] _sliderPrefabs;
+    private List<Slider> _sliders = new List<Slider>();
     [SerializeField] private List<RepairSliders> _repairSliders = new List<RepairSliders>();
     [SerializeField] private List<Transform> _repairSliderPoints = new List<Transform>();
-    [SerializeField] private int _brokenLights = 1;
+    [SerializeField] private Transform[] _sliderSpawnPoints;
 
     public override void StartMinigame()
     {
         base.StartMinigame();
 
-
+        PickRandomSliders();
+        FixAllSliders();
+        BreakRandomSlider();
     }
 
-    private void PickRandomSlider()
+    private void PickRandomSliders()
     {
-        // get sliders from list
-        List<Slider> sliders = new List<Slider>();
-        for (int i = 0; i < _sliders.Count; i++)
+        for(int i = 0;  i < _sliderSpawnPoints.Length; i++)
         {
-            sliders.Add(_sliders[i]);
+            // selects random prefab
+            int indexToSpawn = Random.Range(0, _sliderPrefabs.Length);
+            Instantiate(_sliderPrefabs[indexToSpawn], _sliderSpawnPoints[i]);
+            _sliders.Add(_sliderPrefabs[indexToSpawn]);
         }
+    }
 
-        for(int i = 0;  i < _brokenLights; i++)
+    private void FixAllSliders()
+    {
+        foreach (Slider sliders in _sliders)
         {
-            int indexToBreak = Random.Range(0, _sliders.Count);
-            sliders.Remove(sliders[indexToBreak]);
-
-
-            //lights[indexToTurnOn].Switch();
-            ////savedLights.Add(lights[indexToTurnOn]);
-            //lights.Remove(lights[indexToTurnOn]);
+            sliders.SetFixed();
         }
+    }
+
+    private void BreakRandomSlider()
+    {        
+        int indexToBreak = Random.Range(0, 1);
+        Debug.Log(indexToBreak);
+        Debug.Log(_sliders.Count);
+        _sliders[indexToBreak].SetBroken();
     }
 
     private void SpawnRepairSlider()

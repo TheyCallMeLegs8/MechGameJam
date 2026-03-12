@@ -776,8 +776,6 @@ GameObject:
   - component: {fileID: 2561137979444301973}
   - component: {fileID: 485687472080841532}
   - component: {fileID: 5307914829204963186}
-  - component: {fileID: 5660010121023427153}
-  - component: {fileID: 1520240842535368323}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -858,44 +856,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5660010121023427153
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251399781930394390}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1520240842535368323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251399781930394390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec54b33cbb2abc4ea1272cf79e14148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Slider
-  _clamps:
-  - {fileID: 7200146817257374094}
-  - {fileID: 7757871186611219949}
-  _disposePosition: {x: 4.19, y: 0.814, z: 0}
-  _brokenMarker: {fileID: 0}
 --- !u!1 &5574414368922372716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +997,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5828610945986199763}
+  - component: {fileID: 8727063797174085661}
+  - component: {fileID: 1084457149225334412}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -1061,5 +1023,76 @@ Transform:
   - {fileID: 3267816901664084061}
   - {fileID: 7045518860751016199}
   - {fileID: 1877558566196405008}
+  - {fileID: 309443594985649737}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8727063797174085661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904523375975337498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec54b33cbb2abc4ea1272cf79e14148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slider
+  _clamps:
+  - {fileID: 7200146817257374094}
+  - {fileID: 7757871186611219949}
+  _disposePosition: {fileID: 309443594985649737}
+  _sliderMesh: {fileID: 4251399781930394390}
+  _brokenMarker: {fileID: 2904688512799892309}
+--- !u!65 &1084457149225334412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904523375975337498}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &9026477503737056341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 309443594985649737}
+  m_Layer: 0
+  m_Name: DisposePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &309443594985649737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026477503737056341}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.785, y: 0.312, z: -0.55}
+  m_LocalScale: {x: 7.048945, y: 2.9898047, z: 11.946859}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5828610945986199763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

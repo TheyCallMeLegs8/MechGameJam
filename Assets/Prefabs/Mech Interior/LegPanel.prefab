@@ -202,15 +202,39 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
       propertyPath: OnOpenPanel.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
       propertyPath: OnOpenPanel.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 492953880331868595}
     - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 492953880331868595}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 7145245846373952376}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
       propertyPath: OnOpenPanel.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
@@ -218,8 +242,24 @@ PrefabInstance:
       value: StartMinigame
       objectReference: {fileID: 0}
     - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DestroyAllSliders
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
       propertyPath: OnOpenPanel.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: LegMiniGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LegMiniGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
       propertyPath: OnOpenPanel.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
@@ -227,6 +267,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
       propertyPath: OnOpenPanel.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: OnClosePanel.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5126463253733068997, guid: c078ad58f0da10045854dab3d346916e, type: 3}

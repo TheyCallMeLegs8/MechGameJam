@@ -20,12 +20,14 @@ public class LegMiniGame : MiniGameBase
 
     private void PickRandomSliders()
     {
-        for(int i = 0;  i < _sliderSpawnPoints.Length; i++)
+        _sliders.Clear();
+
+        for (int i = 0;  i < _sliderSpawnPoints.Length; i++)
         {
             // selects random prefab
             int indexToSpawn = Random.Range(0, _sliderPrefabs.Length);
-            Instantiate(_sliderPrefabs[indexToSpawn], _sliderSpawnPoints[i]);
-            _sliders.Add(_sliderPrefabs[indexToSpawn]);
+            Slider spawnedSlider = Instantiate(_sliderPrefabs[indexToSpawn], _sliderSpawnPoints[i]);
+            _sliders.Add(spawnedSlider);
         }
     }
 
@@ -39,10 +41,16 @@ public class LegMiniGame : MiniGameBase
 
     private void BreakRandomSlider()
     {        
-        int indexToBreak = Random.Range(0, 1);
-        Debug.Log(indexToBreak);
-        Debug.Log(_sliders.Count);
+        int indexToBreak = Random.Range(0, 2);
         _sliders[indexToBreak].SetBroken();
+    }
+
+    public void DestroyAllSliders()
+    {
+        foreach (Slider sliders in _sliders)
+        {
+            Destroy(sliders.gameObject);
+        }
     }
 
     private void SpawnRepairSlider()

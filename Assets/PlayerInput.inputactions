@@ -86,6 +86,15 @@
                     "processors": "",
                     "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "0aba93b5-c320-4567-bc06-270030c2775a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -454,8 +463,8 @@
                 },
                 {
                     "name": "",
-                    "id": "aa546e74-0a34-465e-8509-92453ccf9c57",
-                    "path": "<Keyboard>/e",
+                    "id": "8ecafc03-3b44-4977-95d8-155c030d532b",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -465,12 +474,12 @@
                 },
                 {
                     "name": "",
-                    "id": "8ecafc03-3b44-4977-95d8-155c030d532b",
-                    "path": "<Mouse>/leftButton",
+                    "id": "aead72ef-116b-41b6-b850-1a4bcae49fb6",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Interact",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

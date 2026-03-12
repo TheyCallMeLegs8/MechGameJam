@@ -81,6 +81,11 @@ public class Movement : MonoBehaviour
         }
     }
 
+    public void StopMovement()
+    {
+        SetMoveInput(Vector3.zero);
+    }
+
     public void SetMoveInput(Vector3 input)
     {
         input = Vector3.ClampMagnitude(input, 1f);

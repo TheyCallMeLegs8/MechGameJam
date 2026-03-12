@@ -289,13 +289,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   <CharacterController>k__BackingField: {fileID: 6386071743864434201}
   <Speed>k__BackingField: 5
-  <LookSensitivity>k__BackingField: {x: 5, y: 5}
+  <LookSensitivity>k__BackingField: {x: 10, y: 10}
   <TurnSpeed>k__BackingField: 30
   <EndRotationSpeed>k__BackingField: 60
-  <EndShakeSettings>k__BackingField:
+  <EndShakeSettingsLeft>k__BackingField:
     strength: {x: 0, y: 0, z: 0}
-    duration: 0
-    frequency: 0
+    duration: 1
+    frequency: 10
     enableFalloff: 0
     falloffEase: 0
     strengthOverTime:
@@ -306,7 +306,27 @@ MonoBehaviour:
       m_RotationOrder: 4
     asymmetry: 0
     easeBetweenShakes: 0
-    cycles: 0
+    cycles: 1
+    startDelay: 0
+    endDelay: 0
+    useUnscaledTime: 0
+    _useFixedUpdate: 0
+    _updateType: 0
+  <EndShakeSettingRight>k__BackingField:
+    strength: {x: 0, y: 0, z: 0}
+    duration: 1
+    frequency: 10
+    enableFalloff: 0
+    falloffEase: 0
+    strengthOverTime:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    asymmetry: 0
+    easeBetweenShakes: 0
+    cycles: 1
     startDelay: 0
     endDelay: 0
     useUnscaledTime: 0
@@ -327,12 +347,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
   <PlayerInput>k__BackingField: {fileID: 6913665081302795656}
   <Movement>k__BackingField: {fileID: 5314641150389197040}
-  <Camera>k__BackingField: {fileID: 1121217197668448888}
+  <PlayerCamera>k__BackingField: {fileID: 1121217197668448888}
   _interactRange: 3
   _interactMask:
     serializedVersion: 2
     m_Bits: 1
   _interactOffset: {x: 0, y: 0, z: 0}
+  EnterWalkingState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 514802428812151144}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  EnterMinigameState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 514802428812151144}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  EnterSittingState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6913665081302795656
 MonoBehaviour:
   m_ObjectHideFlags: 0

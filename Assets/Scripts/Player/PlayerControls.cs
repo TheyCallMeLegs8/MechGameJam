@@ -136,10 +136,6 @@ public class PlayerControls : MonoBehaviour
                 }
             }
         }
-
-        //Debug.Log($"Current Clicked Interactable: {_currentClickedInteractable}");
-        //Debug.Log($"Current Interactable Object: {_currentInteractObject}");
-        //Debug.Log($"Current Interactable: {_currentInteractable}");
     }
 
     private void FixedUpdate()

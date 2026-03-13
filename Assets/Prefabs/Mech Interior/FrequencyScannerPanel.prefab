@@ -965,7 +965,8 @@ MonoBehaviour:
   _maxFrequency: 3
   _minAmplitude: 0.05
   _minFrequency: 0.9
-  _matchRange: 0.4
+  _matchFreqRange: 0.4
+  _matchAmpRange: 0.4
   _randomizeOnStart: 1
   _ampRandomRange: 0.2
   _freqRandomRange: 3
@@ -1202,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6691979335915687036, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.122
+      objectReference: {fileID: 0}
     - target: {fileID: 7041366934928493474, guid: c078ad58f0da10045854dab3d346916e, type: 3}
       propertyPath: m_Name
       value: FreqPanel
@@ -1328,7 +1333,8 @@ MonoBehaviour:
   _maxFrequency: 3
   _minAmplitude: 0.05
   _minFrequency: 0.9
-  _matchRange: 0.02
+  _matchFreqRange: 0.08
+  _matchAmpRange: 0.02
   _randomizeOnStart: 1
   _ampRandomRange: 0.2
   _freqRandomRange: 3

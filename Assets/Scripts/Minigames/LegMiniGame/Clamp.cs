@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class Clamp : MonoBehaviour, IInteractable
 {
     [SerializeField] private float _moveToPoint;
+    [SerializeField] private Slider _slider;
 
     private bool _isClamped = true;
 
@@ -12,6 +13,9 @@ public class Clamp : MonoBehaviour, IInteractable
 
     public void Interact(GameObject interactor)
     {
+        if (!_slider.IsBroken) return;
+        if (_slider.IsDisposed) return;
+
         if (_isClamped)
         {
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + _moveToPoint, transform.localPosition.z);

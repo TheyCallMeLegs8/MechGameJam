@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4084721881706804272}
   - component: {fileID: 2698991544779785521}
   - component: {fileID: 5822916332926295568}
-  - component: {fileID: 4351717077454976336}
   m_Layer: 0
   m_Name: Varient
   m_TagString: Untagged
@@ -91,27 +90,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4351717077454976336
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6266147438473308500}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 1, z: 0.99999994}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3643073107873793141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,7 +100,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2904688512799892309, guid: ad84de26539cf9549997dab37631b3e3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5828610945986199763, guid: ad84de26539cf9549997dab37631b3e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -205,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clamp
   _moveToPoint: -0.3
+  _slider: {fileID: 0}
   OnUnClamp:
     m_PersistentCalls:
       m_Calls: []
@@ -229,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clamp
   _moveToPoint: -0.3
+  _slider: {fileID: 0}
   OnUnClamp:
     m_PersistentCalls:
       m_Calls: []

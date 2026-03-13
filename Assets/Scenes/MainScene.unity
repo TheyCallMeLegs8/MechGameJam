@@ -2748,10 +2748,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrequencyScannerPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 8640263587021410187, guid: 359618e5cf5a12741911bea92f2e0dce, type: 3}
-      propertyPath: _matchRange
-      value: 0.01
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

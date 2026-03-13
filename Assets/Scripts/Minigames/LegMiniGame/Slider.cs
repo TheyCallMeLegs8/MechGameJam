@@ -1,17 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Slider : MonoBehaviour, IInteractable
 {
     [SerializeField] private List<Clamp> _clamps = new List<Clamp>();
-    [SerializeField] private Transform _disposePosition;
-    [SerializeField] private GameObject _sliderMesh;
+    [field: SerializeField] public GameObject _sliderMesh { get; private set; }
     [SerializeField] private GameObject _brokenMarker;
-    
+    [field: SerializeField] public int Id { get; private set; } = 1;
+    private bool _isRepairSlider = false;
+
     private int _totalClamps;
     private bool _isClamped = true;
-    private bool _isDisposed = false;
-    private bool _isBroken = false;
+    public bool IsDisposed { get; private set; } = false;
+    public bool IsBroken { get; private set; } = false;
+
+    [SerializeField] public UnityEvent OnDispose = new UnityEvent();
 
     private void OnEnable()
     {
@@ -34,13 +38,13 @@ public class Slider : MonoBehaviour, IInteractable
 
     public void SetBroken()
     {
-        _isBroken = true;
+        IsBroken = true;
         _brokenMarker.SetActive(true);
     }
 
     public void SetFixed()
     {
-        _isBroken = false;
+        IsBroken = false;
         _brokenMarker.SetActive(false);
     }
 
@@ -56,12 +60,21 @@ public class Slider : MonoBehaviour, IInteractable
         if (_totalClamps > 0) _isClamped = true;
     }
 
+    public void SetIsRepairSlider(bool isRepairSlider)
+    {
+        _isRepairSlider = isRepairSlider;
+    }
+
     public void Interact(GameObject interactor)
     {
         if (_isClamped) return;
-        if (_isDisposed) return;
-        transform.localPosition = _disposePosition.position;
-        _isDisposed = true;
+        if (IsDisposed) return;
+
+        if (!_isRepairSlider)
+        {
+            OnDispose.Invoke();
+            IsDisposed = true;
+        }
     }
 
     public void StopInteract(GameObject interactor)

@@ -6,6 +6,7 @@ public class LegMiniGame : MiniGameBase
     [SerializeField] private Slider[] _sliderPrefabs;
     [SerializeField] private Slider[] _repairSliderPrefabs;
     private List<Slider> _sliders = new List<Slider>();
+    private List<Slider> _currentRepairSliders = new List<Slider>();
     [SerializeField] private List<Transform> _repairSliderPoints = new List<Transform>();
     [SerializeField] private Transform[] _sliderSpawnPoints;
     [SerializeField] private Transform _teleportPoint;
@@ -52,32 +53,49 @@ public class LegMiniGame : MiniGameBase
 
     private void SpawnRepairSliders()
     {
+        List<Slider> repairSliders = new List<Slider>();
+        repairSliders.Clear();
+
         Slider goalSlider = null;
-        for(int i = 0; i < _repairSliderPrefabs.Length; i++)
+
+        // fills repairSliders List & sets goal slider
+        for (int i = 0; i < _repairSliderPrefabs.Length; i++)
         {
+            repairSliders.Add(_repairSliderPrefabs[i]);
+
+            // doesn't set goal slider if not match ID
             if (_repairSliderPrefabs[i].Id != _brokenSlider.Id) continue;
             goalSlider = _repairSliderPrefabs[i];
         }
 
+        // selects which of 3 points will have the correct one
         int indexToMatch = Random.Range(0, _repairSliderPoints.Count);
-
+        Debug.Log(indexToMatch);
+        
         for(int i = 0; i < _repairSliderPoints.Count; i++)
         {
             // make sure correct one matches the broken one
             if(i  == indexToMatch)
             {
-                Instantiate(goalSlider, _repairSliderPoints[i]);
+                repairSliders.Remove(goalSlider);
+                goalSlider = Instantiate(goalSlider, _repairSliderPoints[i]);
+                _currentRepairSliders.Add(goalSlider);
                 continue;
             }
 
             // spawn random one from prefabs
-            int indexToSpawn = Random.Range(0, _repairSliderPoints.Count);
+            int indexToSpawn = Random.Range(0, _repairSliderPrefabs.Length);
 
-            // if it is a duplicate of the other repair one then skip
-            if (_repairSliderPrefabs[indexToSpawn].Id == _brokenSlider.Id) continue;
+            for(int j = 0; j < _repairSliderPrefabs.Length; j++)
+            {
+                // || repairSliders[indexToSpawn].Id == _currentRepairSliders[i].Id
+                if (_repairSliderPrefabs[indexToSpawn].Id == _brokenSlider.Id) continue;
 
-            // spawn slider
-            Slider spawnedRepairSlider = Instantiate(_repairSliderPrefabs[indexToSpawn], _repairSliderPoints[i]);
+                Slider spawnedRepairSlider = Instantiate(_repairSliderPrefabs[j], _repairSliderPoints[i]);
+                _currentRepairSliders.Add(spawnedRepairSlider);
+            }
+
+            Debug.Log(i);
         }
     }
 
@@ -87,6 +105,11 @@ public class LegMiniGame : MiniGameBase
         {
             Destroy(sliders.gameObject);
         }
+        foreach (Slider repairSliders in _currentRepairSliders)
+        {
+            Destroy(repairSliders.gameObject);
+        }
+        _currentRepairSliders.Clear();
     }
 
     public void DisposeSlider()

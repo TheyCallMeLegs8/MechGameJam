@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairSlider Variant4
       objectReference: {fileID: 0}
+    - target: {fileID: 8727063797174085661, guid: ebe6a2dc72e59454a8d3566debfc306b, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

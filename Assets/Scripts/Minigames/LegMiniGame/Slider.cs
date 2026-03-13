@@ -21,9 +21,12 @@ public class Slider : MonoBehaviour, IInteractable
     {
         foreach (Clamp clamp in _clamps)
         {
-            clamp.OnClamp.AddListener(AddClamp);
-            clamp.OnUnClamp.AddListener(SubtractClamp);
-            AddClamp();
+            if(clamp != null)
+            {
+                clamp?.OnClamp.AddListener(AddClamp);
+                clamp?.OnUnClamp.AddListener(SubtractClamp);
+                AddClamp();
+            }
         }
     }
 
@@ -31,8 +34,11 @@ public class Slider : MonoBehaviour, IInteractable
     {
         foreach (Clamp clamp in _clamps)
         {
-            clamp.OnClamp.RemoveListener(AddClamp);
-            clamp.OnUnClamp.RemoveListener(SubtractClamp);
+            if (clamp != null)
+            {
+                clamp?.OnClamp.RemoveListener(AddClamp);
+                clamp?.OnUnClamp.RemoveListener(SubtractClamp);
+            }
         }
     }
 

@@ -421,7 +421,11 @@ MonoBehaviour:
   - {fileID: 111625068512154712, guid: ac57558287733e6499c41a5d3a8a1439, type: 3}
   - {fileID: 959894651690937827, guid: a529d11d46f73d84a941609dc46d6209, type: 3}
   - {fileID: 6555162918422088358, guid: 85b986cbfab32054aa237039c2f6d97a, type: 3}
-  _repairSliders: []
+  _repairSliderPrefabs:
+  - {fileID: 4111823196689751099, guid: 4bbc873446580374b9e40b865dbf9152, type: 3}
+  - {fileID: 4461185379960372354, guid: 079634ac56884e14397af42e5db6eabd, type: 3}
+  - {fileID: 7642068800227607134, guid: df40d8652a7635d43b9148ec1cbaa3f4, type: 3}
+  - {fileID: 1173280429977682394, guid: 0736f919831596a44b00097627b4ac88, type: 3}
   _repairSliderPoints:
   - {fileID: 7430167234936718150}
   - {fileID: 1676063861759913765}

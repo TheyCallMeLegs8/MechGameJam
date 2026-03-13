@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: <Id>k__BackingField
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8727063797174085661, guid: ebe6a2dc72e59454a8d3566debfc306b, type: 3}
+      propertyPath: <IsRepairSlider>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

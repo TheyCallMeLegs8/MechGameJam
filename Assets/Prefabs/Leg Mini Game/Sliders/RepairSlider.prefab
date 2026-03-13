@@ -778,9 +778,15 @@ MonoBehaviour:
   <_sliderMesh>k__BackingField: {fileID: 4251399781930394390}
   _brokenMarker: {fileID: 2904688512799892309}
   <Id>k__BackingField: 1
+  <IsRepairSlider>k__BackingField: 1
+  _startUnClamped: 1
   OnDispose:
     m_PersistentCalls:
       m_Calls: []
+  OnClickRepair:
+    m_PersistentCalls:
+      m_Calls: []
+  IsRepairing: 0
 --- !u!65 &1084457149225334412
 BoxCollider:
   m_ObjectHideFlags: 0

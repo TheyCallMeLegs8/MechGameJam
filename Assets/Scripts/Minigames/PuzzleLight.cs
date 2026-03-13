@@ -6,7 +6,7 @@ public class PuzzleLight : MonoBehaviour
     [SerializeField] private Material _offMat;
     [SerializeField] private MeshRenderer _meshRenderer;
 
-    [SerializeField] private bool _startOn = false; // just for Demo
+    //[SerializeField] private bool _startOn = false; // just for Demo
 
     public bool IsOn { get; private set; }
     public bool IsOff { get; private set; }

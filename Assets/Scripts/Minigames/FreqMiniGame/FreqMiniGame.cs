@@ -21,7 +21,8 @@ public class FreqMiniGame : MiniGameBase
     [SerializeField] protected float _minFrequency = 3.0f;
     private bool _isModifyingAmplitude = false;
     private bool _isModifyingFrequency = false;
-    [SerializeField] protected float _matchRange = 0.4f;
+    [SerializeField] protected float _matchFreqRange = 0.4f;
+    [SerializeField] protected float _matchAmpRange = 0.4f;
 
     [Header("Randomize")]
     [SerializeField] private bool _randomizeOnStart = true;
@@ -100,12 +101,23 @@ public class FreqMiniGame : MiniGameBase
     {
         while (_isModifyingAmplitude)
         {
-            Amplitude = Mathf.Clamp(Amplitude + speed * Time.deltaTime, _minAmplitude, _maxAmplitude);
-            if(Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude) < _matchRange && Mathf.Abs(_miniGameToMatch.Frequency - Frequency) < _matchRange)
+            if(Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude) < _matchAmpRange && Mathf.Abs(_miniGameToMatch.Frequency - Frequency) < _matchFreqRange)
             {
                 Amplitude = _miniGameToMatch.Amplitude;
                 Frequency = _miniGameToMatch.Frequency;
+                break;
             }
+            Amplitude = Mathf.Clamp(Amplitude + speed * Time.deltaTime, _minAmplitude, _maxAmplitude);
+            //if (Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude) < _matchRange)
+            //{
+            //    Debug.Log("Amplitude: " + Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude));
+            //    Debug.Log("Frequency: " + Mathf.Abs(_miniGameToMatch.Frequency - Frequency));
+            //}
+            //if (Mathf.Abs(_miniGameToMatch.Frequency - Frequency) < _matchRange)
+            //{
+            //    Debug.Log("Amplitude: " + Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude));
+            //    Debug.Log("Frequency: " + Mathf.Abs(_miniGameToMatch.Frequency - Frequency));
+            //}
             yield return null;
         }
     }
@@ -114,12 +126,24 @@ public class FreqMiniGame : MiniGameBase
     {
         while (_isModifyingFrequency)
         {
-            Frequency = Mathf.Clamp(Frequency + speed * Time.deltaTime, _minFrequency, _maxFrequency);
-            if (Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude) < _matchRange && Mathf.Abs(_miniGameToMatch.Frequency - Frequency) < _matchRange)
+            if (Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude) < _matchAmpRange && Mathf.Abs(_miniGameToMatch.Frequency - Frequency) < _matchFreqRange)
             {
                 Amplitude = _miniGameToMatch.Amplitude;
                 Frequency = _miniGameToMatch.Frequency;
+                break;
             }
+            Frequency = Mathf.Clamp(Frequency + speed * Time.deltaTime, _minFrequency, _maxFrequency);
+
+            //if (Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude) < _matchRange)
+            //{
+            //    Debug.Log("Amplitude: " + Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude));
+            //    Debug.Log("Frequency: " + Mathf.Abs(_miniGameToMatch.Frequency - Frequency));
+            //}
+            //if (Mathf.Abs(_miniGameToMatch.Frequency - Frequency) < _matchRange)
+            //{
+            //    Debug.Log("Amplitude: " + Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude));
+            //    Debug.Log("Frequency: " + Mathf.Abs(_miniGameToMatch.Frequency - Frequency));
+            //}
             yield return null;
         }
     }

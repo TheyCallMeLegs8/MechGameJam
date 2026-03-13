@@ -278,8 +278,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820281352434380365}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.02999996, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -287,7 +287,7 @@ Transform:
   - {fileID: 7351424253792793925}
   - {fileID: 6614863788853442258}
   - {fileID: 6177541175633175736}
-  m_Father: {fileID: 5828610945986199763}
+  m_Father: {fileID: 2561137979444301973}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872946414652259746
 GameObject:
@@ -542,6 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clamp
   _moveToPoint: -0.3
+  _slider: {fileID: 8727063797174085661}
   OnUnClamp:
     m_PersistentCalls:
       m_Calls: []
@@ -797,6 +798,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8785414950943581369}
+  - {fileID: 1877558566196405008}
   m_Father: {fileID: 5828610945986199763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &485687472080841532
@@ -982,6 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clamp
   _moveToPoint: 0.3
+  _slider: {fileID: 8727063797174085661}
   OnUnClamp:
     m_PersistentCalls:
       m_Calls: []
@@ -1022,7 +1025,6 @@ Transform:
   - {fileID: 2561137979444301973}
   - {fileID: 3267816901664084061}
   - {fileID: 7045518860751016199}
-  - {fileID: 1877558566196405008}
   - {fileID: 309443594985649737}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1041,9 +1043,11 @@ MonoBehaviour:
   _clamps:
   - {fileID: 7200146817257374094}
   - {fileID: 7757871186611219949}
-  _disposePosition: {fileID: 309443594985649737}
-  _sliderMesh: {fileID: 4251399781930394390}
+  <_sliderMesh>k__BackingField: {fileID: 4251399781930394390}
   _brokenMarker: {fileID: 2904688512799892309}
+  OnDispose:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1084457149225334412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1063,8 +1067,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.97458667}
+  m_Center: {x: 0, y: 0, z: 0.012707884}
 --- !u!1 &9026477503737056341
 GameObject:
   m_ObjectHideFlags: 0

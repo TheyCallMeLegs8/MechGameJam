@@ -77,7 +77,6 @@ public class PlayerControls : MonoBehaviour
             if(_currentInteractObject?.GetComponent<Panel>() && _currentPanel != null) return;
             _currentInteractable?.Interact(gameObject);
             _currentClickedInteractable = _currentInteractable;
-            Debug.Log(_currentClickedInteractable);
             if (_currentInteractObject != null)
             {
                 if (_currentInteractObject.TryGetComponent(out Panel panel))

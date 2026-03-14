@@ -226,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 64529796}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 2.5, z: 4.3}
+  m_LocalPosition: {x: 0.21, y: 3.78, z: 5.14}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -375,6 +375,7 @@ MonoBehaviour:
   OnStopInteract:
     m_PersistentCalls:
       m_Calls: []
+  <CanInteract>k__BackingField: 1
 --- !u!4 &112126426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2367999928278417704, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
@@ -399,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &140905765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,6 +1051,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <CanInteract>k__BackingField: 1
 --- !u!65 &709111449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1208,6 +1210,7 @@ MonoBehaviour:
   OnStopInteract:
     m_PersistentCalls:
       m_Calls: []
+  <CanInteract>k__BackingField: 1
 --- !u!135 &740017198
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1531,6 +1534,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <CanInteract>k__BackingField: 1
 --- !u!65 &846017875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1749,6 +1753,98 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OverClockLegs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopOverclockLegs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MechControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MechControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953867974056002897, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 2953867974056002897, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 3022930400338389749, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 5117340004185695258, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 5368000431438491957, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4596
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368000431438491957, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4596
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368000431438491957, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4596
+      objectReference: {fileID: 0}
     - target: {fileID: 5368000431438491957, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
@@ -1792,6 +1888,78 @@ PrefabInstance:
     - target: {fileID: 7763761432483688042, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: m_Name
       value: ControlPanelMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542110766527502718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 8542110766527502718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OverClockLegs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695772172}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopOverclockLegs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MechControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MechControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2080,6 +2248,7 @@ MonoBehaviour:
   OnStopInteract:
     m_PersistentCalls:
       m_Calls: []
+  <CanInteract>k__BackingField: 1
 --- !u!65 &1308785080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2629,6 +2798,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623053617}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1650116838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1081354650064094249, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c64388ac20a8134abdd9ff3c773ad86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechTerminal
 --- !u!114 &1695772172 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8158320360417711467, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
@@ -2722,6 +2902,7 @@ MonoBehaviour:
   OnStopInteract:
     m_PersistentCalls:
       m_Calls: []
+  <CanInteract>k__BackingField: 1
 --- !u!65 &1747690145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3223,7 +3404,11 @@ PrefabInstance:
     - target: {fileID: 8158320360417711467, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
       propertyPath: _terminal
       value: 
-      objectReference: {fileID: 140905765}
+      objectReference: {fileID: 1650116838}
+    - target: {fileID: 8158320360417711467, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
+      propertyPath: _overClockLegsSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

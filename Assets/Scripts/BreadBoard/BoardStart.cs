@@ -5,6 +5,9 @@ using UnityEngine.Events;
 [RequireComponent(typeof(LineRenderer))]
 public class BoardStart : MonoBehaviour, IInteractable
 {
+    [SerializeField] private int _neededValue;
+    [SerializeField] private int _overclockValue;
+
     [SerializeField] private List<BoardConnector> _adjConnectors = new List<BoardConnector>();
     public List<BoardConnector> _adjascentPoint => _adjConnectors;
 
@@ -15,6 +18,9 @@ public class BoardStart : MonoBehaviour, IInteractable
     [SerializeField] private LineRenderer _lineRenderer;
 
     public UnityEvent<BoardStart> OnClick = new UnityEvent<BoardStart>();
+
+    [SerializeField] public UnityEvent OnAddConnector = new UnityEvent();
+    [SerializeField] public UnityEvent OnRemoveAllConnectors = new UnityEvent();
 
     private void OnValidate()
     {
@@ -40,6 +46,7 @@ public class BoardStart : MonoBehaviour, IInteractable
     {
         _lineRenderer.positionCount++;
         CurrentConnecters.Add(connector);
+        OnAddConnector.Invoke();
         _lineRenderer.SetPosition(CurrentConnecters.Count, connector.transform.position);
     }
 
@@ -53,6 +60,7 @@ public class BoardStart : MonoBehaviour, IInteractable
     {
         _lineRenderer.positionCount = 0;
         CurrentConnecters.Clear();
+        OnRemoveAllConnectors.Invoke();
     }
 
     public void SpawnLight()

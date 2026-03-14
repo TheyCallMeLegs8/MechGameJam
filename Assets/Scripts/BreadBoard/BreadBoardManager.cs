@@ -65,12 +65,6 @@ public class BreadBoardManager : MonoBehaviour
 
     private void OnClickConnector(BoardConnector connector)
     {
-        if (connector == _currentConnector)
-        {
-            connector.DestroyLight();
-            return;
-        }
-
         if(connector.IsActive) return;
 
         if (connector.TryConnect(_currentConnector))

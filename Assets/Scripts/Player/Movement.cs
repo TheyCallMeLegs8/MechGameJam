@@ -11,7 +11,8 @@ public class Movement : MonoBehaviour
     [field: SerializeField] public CharacterController CharacterController { get; private set; }
 
     [Header("Locomotion")]
-    [field: SerializeField] public float Speed { get; private set; } = 5.0f;
+    [field: SerializeField] public float BaseSpeed { get; private set; } = 5.0f;
+    private float _speed;
 
     [Header("Rotation")]
     [field:SerializeField] public Vector2 LookSensitivity { get; private set; } = new Vector2(0.1f, 0.1f);
@@ -44,6 +45,11 @@ public class Movement : MonoBehaviour
         if (CharacterController == null) CharacterController = GetComponent<CharacterController>();
     }
 
+    private void Start()
+    {
+        _speed = BaseSpeed;
+    }
+
     public void SetMoveInput2D(Vector2 input)
     {
         MoveInput2D = input;
@@ -56,7 +62,7 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CharacterController.Move(MoveInput * Speed * Time.deltaTime);
+        CharacterController.Move(MoveInput * _speed * Time.deltaTime);
     }
 
     public void RotateXPosAtSpeed(Transform targetTransform, float speed)
@@ -98,5 +104,10 @@ public class Movement : MonoBehaviour
         MoveInput = flattened;
         // finds movement input as local direction rather than world direction
         LocalMoveInput = transform.InverseTransformDirection(MoveInput);
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        _speed = newSpeed;
     }
 }

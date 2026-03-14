@@ -7,6 +7,7 @@ public class MechControls : MonoBehaviour
 {
     [SerializeField] private MechTerminal _terminal;
     [SerializeField] private Movement _movement;
+    [SerializeField] private float _overClockLegsSpeed;
 
     [SerializeField] private Transform _torso;
     [SerializeField] private Transform _legs;
@@ -63,5 +64,15 @@ public class MechControls : MonoBehaviour
             _movement.RotateXPosAtSpeed(targetTransform, speed);
             yield return null;
         }
+    }
+
+    public void OverClockLegs()
+    {
+        _movement.SetSpeed(_overClockLegsSpeed);
+    }
+
+    public void StopOverclockLegs()
+    {
+        _movement.SetSpeed(_movement.BaseSpeed);
     }
 }

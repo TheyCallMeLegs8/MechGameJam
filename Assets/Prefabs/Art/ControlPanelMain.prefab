@@ -254,6 +254,63 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &2458225050032480812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7104149139760586768}
+  - component: {fileID: 1941980511796280268}
+  m_Layer: 0
+  m_Name: Cam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7104149139760586768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458225050032480812}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2847031109336821230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941980511796280268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458225050032480812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 1
+  <ChargeNeeded>k__BackingField: 5
+  <OverclockChargeNeeded>k__BackingField: 10
+  _interactButton: {fileID: 0}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3359933435900127094
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +410,234 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6873507, y: 0.82512665, z: 0.6037929}
   m_Center: {x: -0.15632468, y: 0.24809313, z: 0.31795034}
+--- !u!1 &6314241650399912667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8881768911525865879}
+  - component: {fileID: 2766165090632895635}
+  m_Layer: 0
+  m_Name: 02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8881768911525865879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6314241650399912667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2847031109336821230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2766165090632895635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6314241650399912667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 0
+  <ChargeNeeded>k__BackingField: 3
+  <OverclockChargeNeeded>k__BackingField: 0
+  _interactButton: {fileID: 0}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &6779192634327748282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6458011315882894267}
+  - component: {fileID: 2051321874942113354}
+  m_Layer: 0
+  m_Name: Radar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6458011315882894267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779192634327748282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2847031109336821230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2051321874942113354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779192634327748282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 1
+  <ChargeNeeded>k__BackingField: 2
+  <OverclockChargeNeeded>k__BackingField: 4
+  _interactButton: {fileID: 0}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &7407814958262862478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6283032230288303288}
+  - component: {fileID: 5669005404312068104}
+  m_Layer: 0
+  m_Name: Shield
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6283032230288303288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407814958262862478}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2847031109336821230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5669005404312068104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407814958262862478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 0
+  <ChargeNeeded>k__BackingField: 4
+  <OverclockChargeNeeded>k__BackingField: 0
+  _interactButton: {fileID: 0}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &7565198426527393863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5524126510428245168}
+  - component: {fileID: 5764526166143481035}
+  m_Layer: 0
+  m_Name: FrequencyScanner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5524126510428245168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7565198426527393863}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2847031109336821230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5764526166143481035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7565198426527393863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 1
+  <ChargeNeeded>k__BackingField: 2
+  <OverclockChargeNeeded>k__BackingField: 4
+  _interactButton: {fileID: 0}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7763761432483688042
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +674,160 @@ Transform:
   - {fileID: 4997565744969476250}
   - {fileID: 2452696120063887621}
   - {fileID: 6365811589767425373}
+  - {fileID: 2847031109336821230}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8401029990951391027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984884920011788477}
+  - component: {fileID: 2162409051339491703}
+  m_Layer: 0
+  m_Name: Core
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984884920011788477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401029990951391027}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2847031109336821230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2162409051339491703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401029990951391027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 0
+  <ChargeNeeded>k__BackingField: 1
+  <OverclockChargeNeeded>k__BackingField: 2
+  _interactButton: {fileID: 0}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &8655326731627999821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8693184897587170375}
+  - component: {fileID: 891133734304258548}
+  m_Layer: 0
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8693184897587170375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655326731627999821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2847031109336821230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &891133734304258548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655326731627999821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 0
+  <ChargeNeeded>k__BackingField: 14
+  <OverclockChargeNeeded>k__BackingField: 0
+  _interactButton: {fileID: 0}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &8971589870098174767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2847031109336821230}
+  m_Layer: 0
+  m_Name: Systems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2847031109336821230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8971589870098174767}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5524126510428245168}
+  - {fileID: 7104149139760586768}
+  - {fileID: 6458011315882894267}
+  - {fileID: 6283032230288303288}
+  - {fileID: 8881768911525865879}
+  - {fileID: 8693184897587170375}
+  - {fileID: 984884920011788477}
+  m_Father: {fileID: 5368000431438491957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1527358444296072942
 PrefabInstance:
@@ -1146,6 +1584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+  _neededValue: 3
+  _overclockValue: 6
   _adjConnectors:
   - {fileID: 6387516916911018950}
   _onObjectPrefab: {fileID: 4519399868396713135, guid: cf030a4bca892e246bcab20547516e2a, type: 3}
@@ -1153,6 +1593,60 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+  OnAddConnector:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2611619241346901718}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: AddCharge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8581563851574220996}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: AddCharge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRemoveAllConnectors:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2611619241346901718}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: ClearCharges
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8581563851574220996}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: ClearCharges
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!120 &2511785513388751332
 LineRenderer:
   serializedVersion: 3
@@ -1322,11 +1816,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+  _neededValue: 14
+  _overclockValue: 14
   _adjConnectors:
   - {fileID: 340760322034522559}
   _onObjectPrefab: {fileID: 4519399868396713135, guid: cf030a4bca892e246bcab20547516e2a, type: 3}
   _lineRenderer: {fileID: 7332199675388651704}
   OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAddConnector:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
 --- !u!120 &7332199675388651704
@@ -1493,11 +1995,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+  _neededValue: 3
+  _overclockValue: 0
   _adjConnectors:
   - {fileID: 7168888735966435363}
   _onObjectPrefab: {fileID: 4519399868396713135, guid: cf030a4bca892e246bcab20547516e2a, type: 3}
   _lineRenderer: {fileID: 3753496691048869280}
   OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAddConnector:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
 --- !u!120 &3753496691048869280
@@ -1715,11 +2225,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+  _neededValue: 5
+  _overclockValue: 10
   _adjConnectors:
   - {fileID: 192857814993293593}
   _onObjectPrefab: {fileID: 4519399868396713135, guid: cf030a4bca892e246bcab20547516e2a, type: 3}
   _lineRenderer: {fileID: 4314742636086562276}
   OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAddConnector:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
 --- !u!120 &4314742636086562276
@@ -1886,11 +2404,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+  _neededValue: 2
+  _overclockValue: 4
   _adjConnectors:
   - {fileID: 2063166486726406130}
   _onObjectPrefab: {fileID: 4519399868396713135, guid: cf030a4bca892e246bcab20547516e2a, type: 3}
   _lineRenderer: {fileID: 2153975107410481810}
   OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAddConnector:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
 --- !u!120 &2153975107410481810
@@ -2103,11 +2629,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+  _neededValue: 4
+  _overclockValue: 0
   _adjConnectors:
   - {fileID: 1309529899769508853}
   _onObjectPrefab: {fileID: 4519399868396713135, guid: cf030a4bca892e246bcab20547516e2a, type: 3}
   _lineRenderer: {fileID: 4320097984036858823}
   OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAddConnector:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
 --- !u!120 &4320097984036858823
@@ -2457,11 +2991,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+  _neededValue: 2
+  _overclockValue: 4
   _adjConnectors:
   - {fileID: 379837173454813132}
   _onObjectPrefab: {fileID: 4519399868396713135, guid: cf030a4bca892e246bcab20547516e2a, type: 3}
   _lineRenderer: {fileID: 939498564208054306}
   OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAddConnector:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
 --- !u!120 &939498564208054306
@@ -2720,11 +3262,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+  _neededValue: 2
+  _overclockValue: 0
   _adjConnectors:
   - {fileID: 4521659074507072701}
   _onObjectPrefab: {fileID: 4519399868396713135, guid: cf030a4bca892e246bcab20547516e2a, type: 3}
   _lineRenderer: {fileID: 613991620958430080}
   OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAddConnector:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
 --- !u!120 &613991620958430080
@@ -3062,13 +3612,539 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1081354650064094249}
+    - targetCorrespondingSourceObject: {fileID: -5564197806554357289, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8822061806097947451}
+    - targetCorrespondingSourceObject: {fileID: -5564197806554357289, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3022930400338389749}
+    - targetCorrespondingSourceObject: {fileID: -1045745906846940462, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6670903705043307705}
+    - targetCorrespondingSourceObject: {fileID: -1045745906846940462, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5831670872019728552}
+    - targetCorrespondingSourceObject: {fileID: -1045745906846940462, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8581563851574220996}
+    - targetCorrespondingSourceObject: {fileID: -2184614349329862653, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4370931018286361247}
+    - targetCorrespondingSourceObject: {fileID: -2184614349329862653, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1394231443386521739}
+    - targetCorrespondingSourceObject: {fileID: -2184614349329862653, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2611619241346901718}
+    - targetCorrespondingSourceObject: {fileID: 3590085391005453300, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2953867974056002897}
+    - targetCorrespondingSourceObject: {fileID: 3590085391005453300, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9026609315657077808}
+    - targetCorrespondingSourceObject: {fileID: 5107242353243265378, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2316495479941151045}
+    - targetCorrespondingSourceObject: {fileID: 5107242353243265378, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5117340004185695258}
+    - targetCorrespondingSourceObject: {fileID: -3972294026681411191, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8542110766527502718}
+    - targetCorrespondingSourceObject: {fileID: -3972294026681411191, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 758097585908791874}
   m_SourcePrefab: {fileID: 100100000, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+--- !u!1 &153102768372031220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2184614349329862653, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+  m_PrefabInstance: {fileID: 7183627312528191223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4370931018286361247
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153102768372031220}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019672863, y: 0.04771486, z: 0.03346484}
+  m_Center: {x: 0.009835876, y: 0.0013770816, z: -0.000008479694}
+--- !u!114 &1394231443386521739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153102768372031220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02075359f5486d443b6e41017c211cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractButton
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2611619241346901718}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: TryDoSystem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  <CanInteract>k__BackingField: 1
+--- !u!114 &2611619241346901718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153102768372031220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 1
+  <ChargeNeeded>k__BackingField: 3
+  <OverclockChargeNeeded>k__BackingField: 6
+  _interactButton: {fileID: 1394231443386521739}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: MoveForward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: StopMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &1354912071088122917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1045745906846940462, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+  m_PrefabInstance: {fileID: 7183627312528191223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6670903705043307705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354912071088122917}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019672675, y: 0.047714543, z: 0.033464313}
+  m_Center: {x: 0.009835942, y: 0.0009619493, z: 0.000008157456}
+--- !u!114 &5831670872019728552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354912071088122917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02075359f5486d443b6e41017c211cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractButton
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8581563851574220996}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: TryDoSystem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  <CanInteract>k__BackingField: 1
+--- !u!114 &8581563851574220996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354912071088122917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 1
+  <ChargeNeeded>k__BackingField: 3
+  <OverclockChargeNeeded>k__BackingField: 6
+  _interactButton: {fileID: 5831670872019728552}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: MoveBackward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: StopMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &2689158217131128725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5107242353243265378, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+  m_PrefabInstance: {fileID: 7183627312528191223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2316495479941151045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689158217131128725}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.011549228, y: 0.034056023, z: 0.034056097}
+  m_Center: {x: 0.005774222, y: 0.0000003526271, z: 0.000000016774546}
+--- !u!114 &5117340004185695258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689158217131128725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02075359f5486d443b6e41017c211cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractButton
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: OrientLegsToTorso
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  <CanInteract>k__BackingField: 1
+--- !u!1 &3129664577738307454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3972294026681411191, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+  m_PrefabInstance: {fileID: 7183627312528191223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8542110766527502718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129664577738307454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02075359f5486d443b6e41017c211cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractButton
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: RotateRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: EndRotation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  <CanInteract>k__BackingField: 1
+--- !u!65 &758097585908791874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129664577738307454}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017019548, y: 0.043460626, z: 0.04369923}
+  m_Center: {x: 0.008509455, y: 0.0012714941, z: -0.00036623207}
+--- !u!1 &5870056639794024224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5564197806554357289, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+  m_PrefabInstance: {fileID: 7183627312528191223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8822061806097947451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870056639794024224}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017511485, y: 0.025510946, z: 0.033077914}
+  m_Center: {x: 0.008722158, y: -0.00007574023, z: -0.000031949967}
+--- !u!114 &3022930400338389749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870056639794024224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02075359f5486d443b6e41017c211cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractButton
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: StopMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  <CanInteract>k__BackingField: 1
+--- !u!1 &5936823336431150339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3590085391005453300, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+  m_PrefabInstance: {fileID: 7183627312528191223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2953867974056002897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936823336431150339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02075359f5486d443b6e41017c211cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractButton
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: RotateLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: EndRotation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  <CanInteract>k__BackingField: 1
+--- !u!65 &9026609315657077808
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936823336431150339}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017532958, y: 0.043460555, z: 0.043699265}
+  m_Center: {x: 0.008766163, y: 0.0012601119, z: -0.0008367298}
 --- !u!4 &7222620996785932572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
   m_PrefabInstance: {fileID: 7183627312528191223}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8029978793794098086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
+  m_PrefabInstance: {fileID: 7183627312528191223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1081354650064094249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029978793794098086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c64388ac20a8134abdd9ff3c773ad86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechTerminal
 --- !u!1001 &7542198805649523614
 PrefabInstance:
   m_ObjectHideFlags: 0

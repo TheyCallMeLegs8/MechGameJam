@@ -297,6 +297,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <CanInteract>k__BackingField: 1
 --- !u!1 &3975098511656032531
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +377,7 @@ LineRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -594,6 +595,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <CanInteract>k__BackingField: 1
 --- !u!1 &4582048152012280308
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +751,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <CanInteract>k__BackingField: 1
 --- !u!1 &5368380945770745838
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +907,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <CanInteract>k__BackingField: 1
 --- !u!1 &7239169588887082425
 GameObject:
   m_ObjectHideFlags: 0

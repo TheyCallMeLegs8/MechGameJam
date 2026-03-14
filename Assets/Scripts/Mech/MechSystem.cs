@@ -24,6 +24,7 @@ public class MechSystem : MonoBehaviour
         if (CurrentCharges >= ChargeNeeded)
         {
             IsCharged = true;
+            if(_interactButton == null) OnDoSystem.Invoke();
         }
         if (CurrentCharges >= OverclockChargeNeeded && _canOverclock)
         {

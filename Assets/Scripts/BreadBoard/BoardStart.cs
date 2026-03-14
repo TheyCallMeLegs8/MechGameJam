@@ -12,11 +12,7 @@ public class BoardStart : MonoBehaviour, IInteractable
     [SerializeField] private GameObject _onObjectPrefab;
     private GameObject _onObjectInstance;
 
-    // variables for drawing line renderer
-    [SerializeField] private LayerMask _interactMask;
     [SerializeField] private LineRenderer _lineRenderer;
-    private bool _isTracking;
-    private Vector3 _mousePosition;
 
     public UnityEvent<BoardStart> OnClick = new UnityEvent<BoardStart>();
 
@@ -42,28 +38,35 @@ public class BoardStart : MonoBehaviour, IInteractable
 
     public void AddConnectorToSequence(BoardConnector connector)
     {
+        _lineRenderer.positionCount++;
         CurrentConnecters.Add(connector);
+        _lineRenderer.SetPosition(CurrentConnecters.Count, connector.transform.position);
     }
 
     public void RemoveConnectorFromSequence(BoardConnector connector)
     {
+        _lineRenderer.positionCount--;
         CurrentConnecters.Remove(connector);
     }
 
     public void ClearConnectors()
     {
+        _lineRenderer.positionCount = 0;
         CurrentConnecters.Clear();
     }
 
     public void SpawnLight()
     {
+        _lineRenderer.positionCount = 1;
         _onObjectInstance = Instantiate(_onObjectPrefab, transform);
+        _lineRenderer.SetPosition(0, transform.position);
     }
 
     public void DestroyLight()
     {
         if (_onObjectInstance != null)
         {
+            _lineRenderer.positionCount = 0;
             Destroy(_onObjectInstance);
         }
     }

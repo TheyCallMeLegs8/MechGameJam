@@ -826,6 +826,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lineRenderer: {fileID: 2511785513388751332}
+  _onObject: {fileID: 0}
 --- !u!120 &2511785513388751332
 LineRenderer:
   serializedVersion: 3
@@ -983,6 +984,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lineRenderer: {fileID: 7332199675388651704}
+  _onObject: {fileID: 0}
 --- !u!120 &7332199675388651704
 LineRenderer:
   serializedVersion: 3
@@ -1135,6 +1137,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lineRenderer: {fileID: 3753496691048869280}
+  _onObject: {fileID: 0}
 --- !u!120 &3753496691048869280
 LineRenderer:
   serializedVersion: 3
@@ -1346,6 +1349,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lineRenderer: {fileID: 4314742636086562276}
+  _onObject: {fileID: 0}
 --- !u!120 &4314742636086562276
 LineRenderer:
   serializedVersion: 3
@@ -1498,6 +1502,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lineRenderer: {fileID: 2153975107410481810}
+  _onObject: {fileID: 0}
 --- !u!120 &2153975107410481810
 LineRenderer:
   serializedVersion: 3
@@ -1710,6 +1715,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lineRenderer: {fileID: 4320097984036858823}
+  _onObject: {fileID: 0}
 --- !u!120 &4320097984036858823
 LineRenderer:
   serializedVersion: 3
@@ -2100,6 +2106,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lineRenderer: {fileID: 939498564208054306}
+  _onObject: {fileID: 0}
 --- !u!120 &939498564208054306
 LineRenderer:
   serializedVersion: 3
@@ -2370,6 +2377,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lineRenderer: {fileID: 613991620958430080}
+  _onObject: {fileID: 0}
 --- !u!120 &613991620958430080
 LineRenderer:
   serializedVersion: 3

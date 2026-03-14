@@ -174,7 +174,7 @@ public class LegMiniGame : MiniGameBase
     private void EndGame()
     {
         // DO nend game stuff
-        Debug.Log("Done");
+        //Debug.Log("Done");
     }
 
     private void OnDisable()

@@ -74,9 +74,10 @@ public class PlayerControls : MonoBehaviour
     {
         if (inputValue.isPressed)
         {
+            if(_currentInteractObject?.GetComponent<Panel>() && _currentPanel != null) return;
             _currentInteractable?.Interact(gameObject);
             _currentClickedInteractable = _currentInteractable;
-
+            Debug.Log(_currentClickedInteractable);
             if (_currentInteractObject != null)
             {
                 if (_currentInteractObject.TryGetComponent(out Panel panel))
@@ -136,10 +137,6 @@ public class PlayerControls : MonoBehaviour
                 }
             }
         }
-
-        //Debug.Log($"Current Clicked Interactable: {_currentClickedInteractable}");
-        //Debug.Log($"Current Interactable Object: {_currentInteractObject}");
-        //Debug.Log($"Current Interactable: {_currentInteractable}");
     }
 
     private void FixedUpdate()

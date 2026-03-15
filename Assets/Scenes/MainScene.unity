@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 64529798}
   - component: {fileID: 64529797}
   m_Layer: 0
-  m_Name: CamRenderTexture
+  m_Name: CamScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,6 +581,129 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &253308636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3705104330435299954, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
+  m_PrefabInstance: {fileID: 467667948130260438}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+--- !u!1 &266550729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 266550733}
+  - component: {fileID: 266550732}
+  - component: {fileID: 266550731}
+  - component: {fileID: 266550730}
+  m_Layer: 0
+  m_Name: Cube (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &266550730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266550729}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &266550731
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266550729}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &266550732
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266550729}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &266550733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266550729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.03, y: 0, z: 26.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1441,6 +1564,7 @@ GameObject:
   - component: {fileID: 915150926}
   - component: {fileID: 915150925}
   - component: {fileID: 915150924}
+  - component: {fileID: 915150928}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1541,6 +1665,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &915150928
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915150923}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1100552536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1549,17 +1700,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.size
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.size
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1343611377}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddCharge
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1343611377}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClearCharges
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MechSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MechSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1574,45 +1769,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1695772172}
     - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OverClockLegs
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1695772172}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopOverclockLegs
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MechControls, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MechControls, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2953867974056002897, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1626,85 +1785,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1695772172}
     - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1454538001}
     - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AddCharge
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1454538001}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClearCharges
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MechSystem, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MechSystem, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5117340004185695258, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1695772172}
-    - target: {fileID: 5368000431438491957, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.4596
-      objectReference: {fileID: 0}
-    - target: {fileID: 5368000431438491957, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.4596
-      objectReference: {fileID: 0}
-    - target: {fileID: 5368000431438491957, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4596
-      objectReference: {fileID: 0}
     - target: {fileID: 5368000431438491957, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
@@ -1745,6 +1836,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 253308636}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 253308636}
     - target: {fileID: 7763761432483688042, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: m_Name
       value: ControlPanelMain
@@ -1758,18 +1857,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1695772172}
     - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1695772172}
@@ -1782,45 +1869,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1695772172}
     - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OverClockLegs
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1695772172}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopOverclockLegs
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MechControls, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MechControls, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8581563851574220996, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2314,6 +2365,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339170684}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1343611377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5898279744457052781, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
+  m_PrefabInstance: {fileID: 467667948130260438}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
 --- !u!1 &1376182361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,6 +2785,146 @@ Transform:
   - {fileID: 876780985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1744658766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744658770}
+  - component: {fileID: 1744658769}
+  - component: {fileID: 1744658768}
+  - component: {fileID: 1744658767}
+  - component: {fileID: 1744658771}
+  m_Layer: 0
+  m_Name: Cube (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1744658767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744658766}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1744658768
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744658766}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1744658769
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744658766}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1744658770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744658766}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.06643908, y: -0.48231736, z: 0.028542753, w: -0.873007}
+  m_LocalPosition: {x: 9.800156, y: 3.2262833, z: 24.60527}
+  m_LocalScale: {x: 11, y: 11, z: 11}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1744658771
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744658766}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1747690143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,6 +3402,10 @@ PrefabInstance:
       propertyPath: _screen
       value: 
       objectReference: {fileID: 64529798}
+    - target: {fileID: 868476521723575133, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
+      propertyPath: _hitLayer.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1963138507975988166, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3240,122 +3446,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 467667948130260439}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 467667948130260439}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 467667948130260439}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SwitchToLowQuality
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchToHighQuality
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 467667948130260439}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SwitchToLowQuality
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchToLowQuality
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: MechCam, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MechCam, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: MechCam, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MechCam, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopSystem.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-      propertyPath: OnStopOverclock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8158320360417711467, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
       propertyPath: _terminal
       value: 
@@ -3365,17 +3455,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
---- !u!114 &467667948130260439 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 541505854240883011, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
-  m_PrefabInstance: {fileID: 467667948130260438}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34b566e51f655264e9fc5b3cedc0b1fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MechCam
 --- !u!1001 &5018604344978843903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3666,5 +3745,7 @@ SceneRoots:
   - {fileID: 1698127583}
   - {fileID: 64529800}
   - {fileID: 915150927}
+  - {fileID: 1744658770}
   - {fileID: 583206847}
   - {fileID: 1100552536}
+  - {fileID: 266550733}

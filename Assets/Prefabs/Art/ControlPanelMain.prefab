@@ -311,6 +311,9 @@ MonoBehaviour:
   OnOverclock:
     m_PersistentCalls:
       m_Calls: []
+  OnStopOverclock:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3359933435900127094
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +470,9 @@ MonoBehaviour:
   OnOverclock:
     m_PersistentCalls:
       m_Calls: []
+  OnStopOverclock:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6779192634327748282
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +528,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopOverclock:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &7407814958262862478
@@ -581,6 +590,9 @@ MonoBehaviour:
   OnOverclock:
     m_PersistentCalls:
       m_Calls: []
+  OnStopOverclock:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7565198426527393863
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +650,9 @@ MonoBehaviour:
   OnOverclock:
     m_PersistentCalls:
       m_Calls: []
+  OnStopOverclock:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7763761432483688042
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +679,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.25649, y: -1.04133, z: -5.03464}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4596, y: 1.4596, z: 1.4596}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7222620996785932572}
@@ -734,6 +749,9 @@ MonoBehaviour:
   OnOverclock:
     m_PersistentCalls:
       m_Calls: []
+  OnStopOverclock:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8655326731627999821
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +807,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopOverclock:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8971589870098174767
@@ -2236,10 +2257,34 @@ MonoBehaviour:
       m_Calls: []
   OnAddConnector:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: AddCharge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnRemoveAllConnectors:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: ClearCharges
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!120 &4314742636086562276
 LineRenderer:
   serializedVersion: 3
@@ -3273,10 +3318,34 @@ MonoBehaviour:
       m_Calls: []
   OnAddConnector:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: AddCharge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnRemoveAllConnectors:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechSystem, Assembly-CSharp
+        m_MethodName: ClearCharges
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!120 &613991620958430080
 LineRenderer:
   serializedVersion: 3
@@ -3764,7 +3833,34 @@ MonoBehaviour:
         m_CallState: 2
   OnOverclock:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: OverClockLegs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopOverclock:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: StopOverclockLegs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1354912071088122917 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1045745906846940462, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}
@@ -3870,7 +3966,34 @@ MonoBehaviour:
         m_CallState: 2
   OnOverclock:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: OverClockLegs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopOverclock:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MechControls, Assembly-CSharp
+        m_MethodName: StopOverclockLegs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2689158217131128725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5107242353243265378, guid: db9f794ae1022b04ab96fd7e15199519, type: 3}

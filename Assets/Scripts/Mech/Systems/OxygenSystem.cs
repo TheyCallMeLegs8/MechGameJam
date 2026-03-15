@@ -19,7 +19,6 @@ public class OxygenSystem : MonoBehaviour
     {
         _isPoisonedText.SetActive(true);
         _isCleaningText.SetActive(false);
-        Debug.Log("Started Poison");
         _poisonCoroutine = StartCoroutine(PoisonRoutine());
     }
 
@@ -28,6 +27,10 @@ public class OxygenSystem : MonoBehaviour
         while (_isPoisoned && _canBePoisoned)
         {
             _slider.value -= _poisonSpeed * Time.deltaTime;
+            if(_slider.value <= 0)
+            {
+                _isPoisonedText.SetActive(false);
+            }
             yield return null;
         }
     }
@@ -36,7 +39,6 @@ public class OxygenSystem : MonoBehaviour
     {
         _isPoisonedText.SetActive(false);
         _isCleaningText.SetActive(true);
-        Debug.Log("Ended Poison");
         _purifyCoroutine = StartCoroutine(CleanAirRoutine());
     }
 
@@ -45,6 +47,10 @@ public class OxygenSystem : MonoBehaviour
         while (!_isPoisoned || !_canBePoisoned)
         {
             _slider.value += _cleanAirSpeed * Time.deltaTime;
+            if (_slider.value >= 1)
+            {
+                _isCleaningText.SetActive(false);
+            }
             yield return null;
         }
     }

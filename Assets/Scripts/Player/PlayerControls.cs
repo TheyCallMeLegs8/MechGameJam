@@ -80,6 +80,7 @@ public class PlayerControls : MonoBehaviour
             {
                 if (_currentInteractObject.TryGetComponent(out Panel panel))
                 {
+                    if(!panel.IsBroken) return;
                     if (_currentPanel != null) return;
                     _currentPanel = panel;
                     MinigameState();

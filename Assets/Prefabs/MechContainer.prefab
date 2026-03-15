@@ -1513,6 +1513,7 @@ GameObject:
   - component: {fileID: 8158320360417711467}
   - component: {fileID: 868476521723575133}
   - component: {fileID: 8347641655757080384}
+  - component: {fileID: 274721187394248609}
   m_Layer: 0
   m_Name: MechBody
   m_TagString: Untagged
@@ -1746,6 +1747,23 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 2
+--- !u!114 &274721187394248609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7476104357230008653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e118038f4714054bacc758b4892f99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrokenMechDetector
+  _camera: {fileID: 2651953076303328568}
+  _detectionRange: 100
+  _brokenMechMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &7829925604053880215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,7 +1861,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a590e611aea4244cb0072cd4379906b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OxygenSystem
+  _poisonSpeed: 5
+  _cleanAirSpeed: 5
   _slider: {fileID: 0}
+  _isPoisonedText: {fileID: 0}
+  _isCleaningText: {fileID: 0}
 --- !u!1 &8364329355198689546
 GameObject:
   m_ObjectHideFlags: 0

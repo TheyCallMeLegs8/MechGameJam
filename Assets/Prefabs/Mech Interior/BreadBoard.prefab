@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.708
       objectReference: {fileID: 0}
+    - target: {fileID: 4274794830754320230, guid: c078ad58f0da10045854dab3d346916e, type: 3}
+      propertyPath: <IsBroken>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5441218605161634542, guid: c078ad58f0da10045854dab3d346916e, type: 3}
       propertyPath: m_IsActive
       value: 1

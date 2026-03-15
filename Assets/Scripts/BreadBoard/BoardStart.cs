@@ -22,6 +22,8 @@ public class BoardStart : MonoBehaviour, IInteractable
     [SerializeField] public UnityEvent OnAddConnector = new UnityEvent();
     [SerializeField] public UnityEvent OnRemoveAllConnectors = new UnityEvent();
 
+    [field: SerializeField] public bool IsBroken { get; private set; } = false;
+
     private void OnValidate()
     {
         if(_lineRenderer == null) _lineRenderer = GetComponent<LineRenderer>();
@@ -29,6 +31,7 @@ public class BoardStart : MonoBehaviour, IInteractable
 
     public void Interact(GameObject interactor)
     {
+        if(IsBroken) return;
         OnClick.Invoke(this);
     }
 
@@ -44,6 +47,7 @@ public class BoardStart : MonoBehaviour, IInteractable
 
     public void AddConnectorToSequence(BoardConnector connector)
     {
+        if(IsBroken) return;
         _lineRenderer.positionCount++;
         CurrentConnecters.Add(connector);
         OnAddConnector.Invoke();
@@ -65,6 +69,7 @@ public class BoardStart : MonoBehaviour, IInteractable
 
     public void SpawnLight()
     {
+        if(IsBroken) return;
         _lineRenderer.positionCount = 1;
         _onObjectInstance = Instantiate(_onObjectPrefab, transform);
         _lineRenderer.SetPosition(0, transform.position);
@@ -76,6 +81,26 @@ public class BoardStart : MonoBehaviour, IInteractable
         {
             _lineRenderer.positionCount = 0;
             Destroy(_onObjectInstance);
+        }
+    }
+
+    // called in mech terminal
+    public void SetBroken(bool isBroken)
+    {
+        IsBroken = isBroken;
+        if (IsBroken == true)
+        {
+            if (CurrentConnecters.Count == 0) return;
+
+            for (int i = 0; i < CurrentConnecters.Count; i++)
+            {
+                CurrentConnecters[i].DestroyLight();
+            }
+            ClearConnectors();
+        }
+        else
+        {
+
         }
     }
 }

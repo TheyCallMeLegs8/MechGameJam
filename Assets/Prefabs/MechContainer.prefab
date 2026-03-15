@@ -1674,9 +1674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f055afde207c584aab731eab5114602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetector
-  _hitLayer:
-    serializedVersion: 2
-    m_Bits: 1
   OnCollide:
     m_PersistentCalls:
       m_Calls:
@@ -1684,6 +1681,36 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: ShieldSystem, Assembly-CSharp
         m_MethodName: DamageMech
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnEnterPoisonGas:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6919313747532978604}
+        m_TargetAssemblyTypeName: OxygenSystem, Assembly-CSharp
+        m_MethodName: SetIsPoisoned
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnExitPoisonGas:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6919313747532978604}
+        m_TargetAssemblyTypeName: OxygenSystem, Assembly-CSharp
+        m_MethodName: SetIsPoisoned
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1719,6 +1746,104 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 2
+--- !u!1 &7829925604053880215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737790473521444964}
+  - component: {fileID: 8542574867313632667}
+  - component: {fileID: 6919313747532978604}
+  m_Layer: 0
+  m_Name: 02System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1737790473521444964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7829925604053880215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3747660036120400380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8542574867313632667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7829925604053880215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+  _canOverclock: 0
+  <ChargeNeeded>k__BackingField: 3
+  <OverclockChargeNeeded>k__BackingField: 0
+  _interactButton: {fileID: 0}
+  OnDoSystem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6919313747532978604}
+        m_TargetAssemblyTypeName: OxygenSystem, Assembly-CSharp
+        m_MethodName: TurnPurifierOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStopSystem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6919313747532978604}
+        m_TargetAssemblyTypeName: OxygenSystem, Assembly-CSharp
+        m_MethodName: TurnPurifierOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopOverclock:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6919313747532978604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7829925604053880215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a590e611aea4244cb0072cd4379906b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OxygenSystem
+  _slider: {fileID: 0}
 --- !u!1 &8364329355198689546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,6 +1877,7 @@ Transform:
   - {fileID: 4561443186681942889}
   - {fileID: 2976861409814743768}
   - {fileID: 2265908817381187041}
+  - {fileID: 1737790473521444964}
   m_Father: {fileID: 7811457516418966480}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9059739200237810843

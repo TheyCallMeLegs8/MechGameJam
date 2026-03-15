@@ -73,7 +73,7 @@ public class MechTerminal : MonoBehaviour
             if (_panels[i] == panel)
             {
                 _currentBoards.Add(_boards[i]);
-                _currentBoards[i].SetBroken(false);
+                _boards[i].SetBroken(false);
             }
         }
     }

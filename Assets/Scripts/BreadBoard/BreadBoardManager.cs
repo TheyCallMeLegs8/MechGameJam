@@ -88,4 +88,27 @@ public class BreadBoardManager : MonoBehaviour
     {
         _currentStarter.RemoveConnectorFromSequence(connector);
     }
+
+    public void BreakStarter(BoardStart starter)
+    {
+        if (_currentStarter != null && _currentStarter.CurrentConnecters.Count <= 0) _currentStarter.DestroyLight();
+
+        if (starter.CurrentConnecters.Count > 0)
+        {
+            for (int i = 0; i < starter.CurrentConnecters.Count; i++)
+            {
+                starter.CurrentConnecters[i].DestroyLight();
+            }
+
+            starter.ClearConnectors();
+        }
+
+        starter.DestroyLight();
+
+        starter.SpawnLight();
+        _currentStarter = starter;
+        _currentConnector = starter.GetComponent<BoardConnector>();
+        _currentStarter.ClearConnectors();
+        _currentConnector = null;
+    }
 }

@@ -729,6 +729,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &325137708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardStart
 --- !u!1 &362439502
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +861,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf4b76293714ff46b4f76f7deb702ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
+--- !u!114 &542198709 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardStart
 --- !u!1 &583206844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1064,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!114 &670154374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardStart
 --- !u!1 &709111447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,6 +1824,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1578237098}
     - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011737549}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BreakStarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1343611377}
@@ -1798,6 +1851,50 @@ PrefabInstance:
       propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1343611377}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BreadBoardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1116096255}
+    - target: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BoardStart, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011737549}
+    - target: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BreakStarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BreadBoardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1616804907}
+    - target: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BoardStart, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2611619241346901718, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnDoSystem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1827,6 +1924,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1695772172}
     - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011737549}
+    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BreakStarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1454538001}
@@ -1834,6 +1951,70 @@ PrefabInstance:
       propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1454538001}
+    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BreadBoardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1432020354}
+    - target: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BoardStart, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011737549}
+    - target: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BreakStarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BreadBoardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 670154374}
+    - target: {fileID: 3300603635209569699, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BoardStart, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011737549}
+    - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BreakStarter
+      objectReference: {fileID: 0}
     - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1842,6 +2023,82 @@ PrefabInstance:
       propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 887632464}
+    - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BreadBoardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 542198709}
+    - target: {fileID: 3660614448152355740, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BoardStart, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011737549}
+    - target: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BreakStarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BreadBoardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1480599097}
+    - target: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BoardStart, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011737549}
+    - target: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BreakStarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BreadBoardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 325137708}
+    - target: {fileID: 4882881053658933679, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BoardStart, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5117340004185695258, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1895,6 +2152,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011737549}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BreakStarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: OnAddConnector.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 253308636}
@@ -1902,6 +2179,18 @@ PrefabInstance:
       propertyPath: OnRemoveAllConnectors.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 253308636}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BreadBoardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1513314572}
+    - target: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+      propertyPath: OnBreak.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: BoardStart, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7763761432483688042, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
       propertyPath: m_Name
       value: ControlPanelMain
@@ -1935,6 +2224,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+--- !u!114 &1116096255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1151572388459815644, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardStart
 --- !u!1 &1192253856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,6 +2922,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1432020354 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3237046165561369462, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardStart
 --- !u!114 &1454538001 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5242879942679421243, guid: e7b422e35f4a494438569e404a93f0f7, type: 3}
@@ -2633,6 +2944,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ef65689e54fbc4b98cb8ee94fe598a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MechSystem
+--- !u!114 &1480599097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4650465239706569080, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardStart
+--- !u!114 &1513314572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6371076240517105830, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardStart
 --- !u!114 &1578237098 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8057741717389599653, guid: 359618e5cf5a12741911bea92f2e0dce, type: 3}
@@ -2688,6 +3021,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63c73e797752924da79c47d86decb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Debugger
+--- !u!114 &1616804907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1549209235691304585, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99e5a5487bd474e982099a21c1576a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardStart
 --- !u!1 &1623053617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,6 +3668,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf4b76293714ff46b4f76f7deb702ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
+--- !u!114 &2011737549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5391928893632879506, guid: a2647f55574975644b3428b3d2c07d8b, type: 3}
+  m_PrefabInstance: {fileID: 1100552536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d7b13bc2c85b34f9a5ee14d2120447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BreadBoardManager
 --- !u!1 &2115075544
 GameObject:
   m_ObjectHideFlags: 0

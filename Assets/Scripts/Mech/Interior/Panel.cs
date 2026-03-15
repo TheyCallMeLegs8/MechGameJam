@@ -66,7 +66,6 @@ public class Panel : MonoBehaviour, IInteractable
 
     public void FixPanel()
     {
-        Debug.Log("Fixed!!");
         SetBroken(false);
         OnFix.Invoke(this);
     }

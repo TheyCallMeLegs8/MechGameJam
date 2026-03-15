@@ -2770,6 +2770,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5391928893632879506}
+        m_TargetAssemblyTypeName: BreadBoardManager, Assembly-CSharp
+        m_MethodName: BreakStarter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1549209235691304585}
+          m_ObjectArgumentAssemblyTypeName: BoardStart, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   <IsBroken>k__BackingField: 0
 --- !u!120 &2511785513388751332
 LineRenderer:
@@ -2955,6 +2970,21 @@ MonoBehaviour:
   OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
+  OnBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5391928893632879506}
+        m_TargetAssemblyTypeName: BreadBoardManager, Assembly-CSharp
+        m_MethodName: BreakStarter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4650465239706569080}
+          m_ObjectArgumentAssemblyTypeName: BoardStart, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   <IsBroken>k__BackingField: 0
 --- !u!120 &7332199675388651704
 LineRenderer:
@@ -3154,6 +3184,21 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5391928893632879506}
+        m_TargetAssemblyTypeName: BreadBoardManager, Assembly-CSharp
+        m_MethodName: BreakStarter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3660614448152355740}
+          m_ObjectArgumentAssemblyTypeName: BoardStart, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3414,6 +3459,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5391928893632879506}
+        m_TargetAssemblyTypeName: BreadBoardManager, Assembly-CSharp
+        m_MethodName: BreakStarter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3237046165561369462}
+          m_ObjectArgumentAssemblyTypeName: BoardStart, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   <IsBroken>k__BackingField: 0
 --- !u!120 &4314742636086562276
 LineRenderer:
@@ -3594,6 +3654,21 @@ MonoBehaviour:
   OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
+  OnBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5391928893632879506}
+        m_TargetAssemblyTypeName: BreadBoardManager, Assembly-CSharp
+        m_MethodName: BreakStarter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3300603635209569699}
+          m_ObjectArgumentAssemblyTypeName: BoardStart, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   <IsBroken>k__BackingField: 0
 --- !u!120 &2153975107410481810
 LineRenderer:
@@ -3839,6 +3914,21 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5391928893632879506}
+        m_TargetAssemblyTypeName: BreadBoardManager, Assembly-CSharp
+        m_MethodName: BreakStarter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1151572388459815644}
+          m_ObjectArgumentAssemblyTypeName: BoardStart, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4207,6 +4297,21 @@ MonoBehaviour:
   OnRemoveAllConnectors:
     m_PersistentCalls:
       m_Calls: []
+  OnBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5391928893632879506}
+        m_TargetAssemblyTypeName: BreadBoardManager, Assembly-CSharp
+        m_MethodName: BreakStarter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4882881053658933679}
+          m_ObjectArgumentAssemblyTypeName: BoardStart, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   <IsBroken>k__BackingField: 0
 --- !u!120 &939498564208054306
 LineRenderer:
@@ -4498,6 +4603,21 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnBreak:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5391928893632879506}
+        m_TargetAssemblyTypeName: BreadBoardManager, Assembly-CSharp
+        m_MethodName: BreakStarter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6371076240517105830}
+          m_ObjectArgumentAssemblyTypeName: BoardStart, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5447,6 +5567,8 @@ MonoBehaviour:
   - {fileID: 1549209235691304585}
   - {fileID: 3300603635209569699}
   - {fileID: 4882881053658933679}
+  _currentPanels: []
+  _currentBoards: []
 --- !u!1001 &7542198805649523614
 PrefabInstance:
   m_ObjectHideFlags: 0

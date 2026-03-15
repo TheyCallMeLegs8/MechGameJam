@@ -21,6 +21,7 @@ public class BoardStart : MonoBehaviour, IInteractable
 
     [SerializeField] public UnityEvent OnAddConnector = new UnityEvent();
     [SerializeField] public UnityEvent OnRemoveAllConnectors = new UnityEvent();
+    [SerializeField] public UnityEvent<BoardStart> OnBreak = new UnityEvent<BoardStart>();
 
     [field: SerializeField] public bool IsBroken { get; private set; } = false;
 
@@ -90,17 +91,11 @@ public class BoardStart : MonoBehaviour, IInteractable
         IsBroken = isBroken;
         if (IsBroken == true)
         {
-            if (CurrentConnecters.Count == 0) return;
-
-            for (int i = 0; i < CurrentConnecters.Count; i++)
-            {
-                CurrentConnecters[i].DestroyLight();
-            }
-            ClearConnectors();
+            OnBreak.Invoke(this);
         }
         else
         {
-
+            IsBroken = false;
         }
     }
 }

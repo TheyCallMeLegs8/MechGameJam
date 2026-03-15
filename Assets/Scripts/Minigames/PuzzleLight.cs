@@ -5,6 +5,7 @@ public class PuzzleLight : MonoBehaviour
     [SerializeField] private Material _onMat;
     [SerializeField] private Material _offMat;
     [SerializeField] private MeshRenderer _meshRenderer;
+    [SerializeField] protected GameObject _light;
 
     //[SerializeField] private bool _startOn = false; // just for Demo
 
@@ -22,6 +23,7 @@ public class PuzzleLight : MonoBehaviour
         IsOff = true;
         IsOn = false;
         _meshRenderer.material = _offMat;
+        _light.SetActive(false);
     }
 
     public void Switch()
@@ -41,6 +43,7 @@ public class PuzzleLight : MonoBehaviour
         IsOff = false;
         IsOn = true;
         _meshRenderer.material = _onMat;
+        _light.SetActive(true);
     }
 
     private void TurnOff()
@@ -48,5 +51,6 @@ public class PuzzleLight : MonoBehaviour
         IsOff = true;
         IsOn = false;
         _meshRenderer.material = _offMat;
+        _light.SetActive(false);
     }
 }

@@ -6,6 +6,22 @@ public class CameraMiniGame : MiniGameBase
     [SerializeField] private List<PuzzleLight> _lights = new List<PuzzleLight>();
     [SerializeField] private int _startOnLights = 3;
 
+    private void OnEnable()
+    {
+        foreach (PuzzleLight lights in _lights)
+        {
+            lights.OnTurnLightOn.AddListener(CheckLights);
+        }
+    }
+
+    private void OnDisable()
+    {
+        foreach (PuzzleLight lights in _lights)
+        {
+            lights.OnTurnLightOn.RemoveListener(CheckLights);
+        }
+    }
+
     public override void StartMinigame()
     {
         base.StartMinigame();
@@ -29,6 +45,20 @@ public class CameraMiniGame : MiniGameBase
             lights[indexToTurnOn].Switch();
             //savedLights.Add(lights[indexToTurnOn]);
             lights.Remove(lights[indexToTurnOn]);
+        }
+    }
+
+    private void CheckLights()
+    {
+        int onLights = 0;
+        for(int i = 0; i < _lights.Count; i++)
+        {
+            if(_lights[i].IsOn) onLights++;
+        }
+
+        if(onLights >= _lights.Count)
+        {
+            OnGameComplete.Invoke();
         }
     }
 }

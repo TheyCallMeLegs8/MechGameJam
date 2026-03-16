@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PuzzleLight : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PuzzleLight : MonoBehaviour
 
     public bool IsOn { get; private set; }
     public bool IsOff { get; private set; }
+
+    [SerializeField] public UnityEvent OnTurnLightOn = new UnityEvent();
 
     private void OnValidate()
     {
@@ -44,6 +47,7 @@ public class PuzzleLight : MonoBehaviour
         IsOn = true;
         _meshRenderer.material = _onMat;
         _light.SetActive(true);
+        OnTurnLightOn.Invoke();
     }
 
     private void TurnOff()

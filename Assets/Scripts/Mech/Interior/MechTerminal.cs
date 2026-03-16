@@ -44,11 +44,35 @@ public class MechTerminal : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            _currentPanels[2].SetBroken(true);
-            _currentBoards[2].SetBroken(true);
+            _panels[1].SetBroken(true);
+            _boards[1].SetBroken(true);
 
-            _currentPanels.Remove(_currentPanels[2]);
-            _currentBoards.Remove(_currentBoards[2]);
+            _currentPanels.Remove(_panels[1]);
+            _currentBoards.Remove(_boards[1]);
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            _panels[2].SetBroken(true);
+            _boards[2].SetBroken(true);
+
+            _currentPanels.Remove(_panels[2]);
+            _currentBoards.Remove(_boards[2]);
+        }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            _panels[3].SetBroken(true);
+            _boards[3].SetBroken(true);
+
+            _currentPanels.Remove(_panels[3]);
+            _currentBoards.Remove(_boards[3]);
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            _panels[0].SetBroken(true);
+            _boards[0].SetBroken(true);
+
+            _currentPanels.Remove(_panels[0]);
+            _currentBoards.Remove(_boards[0]);
         }
     }
 

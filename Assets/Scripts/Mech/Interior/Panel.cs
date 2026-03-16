@@ -16,6 +16,9 @@ public class Panel : MonoBehaviour, IInteractable
     [SerializeField] public UnityEvent OnOpenPanel = new UnityEvent();
     [SerializeField] public UnityEvent OnClosePanel = new UnityEvent();
     [SerializeField] public UnityEvent<Panel> OnFix = new UnityEvent<Panel>();
+    [SerializeField] private GameObject _greenLight;
+    [SerializeField] private GameObject _redLight;
+
 
     [field: SerializeField] public bool IsBroken { get; private set; } = false;
 
@@ -40,6 +43,8 @@ public class Panel : MonoBehaviour, IInteractable
     public void SetBroken(bool isBroken)
     {
         IsBroken = isBroken;
+        _redLight.SetActive(isBroken);
+        _greenLight.SetActive(!isBroken);
     }
 
     public void OpenPanel()

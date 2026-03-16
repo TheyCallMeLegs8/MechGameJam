@@ -19,6 +19,7 @@ public class PlayerControls : MonoBehaviour
     [field: SerializeField] public PlayerInput PlayerInput { get; private set; }
     [field: SerializeField] public Movement Movement { get; private set; }
     [field: SerializeField] public CinemachineCamera PlayerCamera { get; private set; }
+    [SerializeField] private SceneLoader _sceneLoader;
 
     private bool _canMove = true;
     private bool _canLook = true;
@@ -37,6 +38,9 @@ public class PlayerControls : MonoBehaviour
     private bool _canExit = false;
 
     private Panel _currentPanel;
+
+    private bool _isSitting = false;
+    private float _lookPitchMultiplier = 1.0f;
 
     [SerializeField] public UnityEvent EnterWalkingState = new UnityEvent();
     [SerializeField] public UnityEvent EnterMinigameState = new UnityEvent();
@@ -66,6 +70,12 @@ public class PlayerControls : MonoBehaviour
     {
         if(!_canLook) return;
         Movement.SetLookInput(inputValue.Get<Vector2>());
+        Debug.Log(inputValue.Get<Vector2>());
+    }
+
+    public void OnMainMenu()
+    {
+        _sceneLoader.LoadScene("MainMenu");
     }
 
     // gets interacables from update and when you click it interacts with them and stores one for when you un-click
@@ -84,6 +94,11 @@ public class PlayerControls : MonoBehaviour
                     if (_currentPanel != null) return;
                     _currentPanel = panel;
                     MinigameState();
+                }
+                else if(_currentInteractObject.TryGetComponent(out Chair chair))
+                {
+                    chair.GetPlayer(this);
+                    SittingState();
                 }
             }
         }
@@ -124,7 +139,7 @@ public class PlayerControls : MonoBehaviour
                 }
             }
         }
-        else if(_currentState == PlayerStates.Minigame)
+        else if(_currentState == PlayerStates.Minigame || _currentState == PlayerStates.Sitting)
         {
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(mouseRay, out RaycastHit hitInfo, Mathf.Infinity, _interactMask))
@@ -148,7 +163,7 @@ public class PlayerControls : MonoBehaviour
         if(!_canLook) return;
         Vector2 input = new Vector2(Movement.LookInput.x * Movement.LookSensitivity.x, Movement.LookInput.y * Movement.LookSensitivity.y);
         // handles look up and down
-        Movement.CurrentPitch -= input.y * Time.deltaTime;
+        Movement.CurrentPitch -= input.y * Time.deltaTime * _lookPitchMultiplier;
         PlayerCamera.transform.localRotation = Quaternion.Euler(Movement.CurrentPitch, 0f, 0f);
 
         // handles looking side to side
@@ -157,7 +172,15 @@ public class PlayerControls : MonoBehaviour
 
     private void Exit()
     {
-        WalkingState();
+        if (_isSitting && _currentPanel != null)
+        {
+            SittingState();
+        }
+        else if (_currentPanel == null || !_isSitting)
+        {
+            WalkingState();
+        }
+
         if (_currentPanel != null)
         {
             _currentPanel.ClosePanel();
@@ -188,6 +211,7 @@ public class PlayerControls : MonoBehaviour
     private void WalkingState()
     {
         ChangeState(PlayerStates.Walking);
+        _lookPitchMultiplier = 1;
         EnterWalkingState.Invoke();
         Movement.SetMoveInput2D(Vector3.zero);
         _canMove = true;
@@ -197,5 +221,20 @@ public class PlayerControls : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    private void SittingState()
+    {
+        ChangeState(PlayerStates.Sitting);
+        _lookPitchMultiplier = 0;
+        EnterSittingState.Invoke();
+        Movement.SetMoveInput2D(Vector3.zero);
+        _canMove = false;
+        _canLook = true;
+        Movement.SetLookInput(Vector3.zero);
+        _canExit = true;
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 }

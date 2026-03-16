@@ -139,6 +139,7 @@ public class Slider : MonoBehaviour, IInteractable
     private void RemoveNewSliders(Slider newSlider)
     {
         newSlider.NewClamps.Clear();
+        newSlider.NewClampsAmount = 0;
         foreach (Clamp clamp in newSlider.NewClamps)
         {
             clamp.SetNewRepairSlider(null);

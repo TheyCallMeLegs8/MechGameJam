@@ -11,7 +11,8 @@ public class Knob : MonoBehaviour, IInteractable
         {
             light.Switch();
         }
-        _knobTop.transform.localPosition = new Vector3(_knobTop.transform.localPosition.x, _knobTop.transform.localPosition.y * -1, _knobTop.transform.localPosition.z);
+        _knobTop.transform.localRotation = new Quaternion(_knobTop.transform.localRotation.x, _knobTop.transform.localRotation.y * -1, _knobTop.transform.localRotation.z, _knobTop.transform.localRotation.w);
+        _knobTop.transform.localScale = new Vector3(_knobTop.transform.localScale.x, _knobTop.transform.localScale.y * -1, _knobTop.transform.localScale.z);
     }
 
     public void StopInteract(GameObject interactor)

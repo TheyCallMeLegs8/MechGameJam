@@ -44,11 +44,7 @@ public class MechTerminal : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            _currentPanels[2].SetBroken(true);
-            _currentBoards[2].SetBroken(true);
-
-            _currentPanels.Remove(_currentPanels[2]);
-            _currentBoards.Remove(_currentBoards[2]);
+            BreakRandomSystem();
         }
     }
 

@@ -105,19 +105,11 @@ public class FreqMiniGame : MiniGameBase
             {
                 Amplitude = _miniGameToMatch.Amplitude;
                 Frequency = _miniGameToMatch.Frequency;
+                EndMinigame();
                 break;
             }
             Amplitude = Mathf.Clamp(Amplitude + speed * Time.deltaTime, _minAmplitude, _maxAmplitude);
-            //if (Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude) < _matchRange)
-            //{
-            //    Debug.Log("Amplitude: " + Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude));
-            //    Debug.Log("Frequency: " + Mathf.Abs(_miniGameToMatch.Frequency - Frequency));
-            //}
-            //if (Mathf.Abs(_miniGameToMatch.Frequency - Frequency) < _matchRange)
-            //{
-            //    Debug.Log("Amplitude: " + Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude));
-            //    Debug.Log("Frequency: " + Mathf.Abs(_miniGameToMatch.Frequency - Frequency));
-            //}
+
             yield return null;
         }
     }
@@ -130,21 +122,19 @@ public class FreqMiniGame : MiniGameBase
             {
                 Amplitude = _miniGameToMatch.Amplitude;
                 Frequency = _miniGameToMatch.Frequency;
+                EndMinigame();
                 break;
             }
             Frequency = Mathf.Clamp(Frequency + speed * Time.deltaTime, _minFrequency, _maxFrequency);
 
-            //if (Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude) < _matchRange)
-            //{
-            //    Debug.Log("Amplitude: " + Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude));
-            //    Debug.Log("Frequency: " + Mathf.Abs(_miniGameToMatch.Frequency - Frequency));
-            //}
-            //if (Mathf.Abs(_miniGameToMatch.Frequency - Frequency) < _matchRange)
-            //{
-            //    Debug.Log("Amplitude: " + Mathf.Abs(_miniGameToMatch.Amplitude - Amplitude));
-            //    Debug.Log("Frequency: " + Mathf.Abs(_miniGameToMatch.Frequency - Frequency));
-            //}
             yield return null;
         }
+    }
+
+    public override void EndMinigame()
+    {
+        base.EndMinigame();
+
+        OnGameComplete.Invoke();
     }
 }

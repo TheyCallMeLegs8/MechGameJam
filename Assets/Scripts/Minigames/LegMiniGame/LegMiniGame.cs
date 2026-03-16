@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LegMiniGame : MiniGameBase
 {
@@ -174,7 +175,7 @@ public class LegMiniGame : MiniGameBase
     private void EndGame()
     {
         // DO nend game stuff
-        //Debug.Log("Done");
+        OnGameComplete.Invoke();
     }
 
     private void OnDisable()

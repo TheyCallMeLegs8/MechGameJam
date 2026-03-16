@@ -1117,6 +1117,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3533725870275204536, guid: 224940e4265fa304da2b8a5538b04eec, type: 3}
   m_PrefabInstance: {fileID: 1219017737}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &406985177 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2396327392874516600, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
+  m_PrefabInstance: {fileID: 6525327197347445074}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854e965bb56a622438d80deae2823d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleLight
 --- !u!1 &423913365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1341,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4745203644682380434, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
   m_PrefabInstance: {fileID: 6525327197347445074}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &539816849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8195955282010430754, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
+  m_PrefabInstance: {fileID: 6525327197347445074}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854e965bb56a622438d80deae2823d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleLight
 --- !u!1 &583206844
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,6 +4229,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459022479}
   m_Mesh: {fileID: 5211342792875404917, guid: d042074a1e78b1044873489b385ed6b2, type: 3}
+--- !u!114 &1565792207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7666645161371634621, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
+  m_PrefabInstance: {fileID: 6525327197347445074}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854e965bb56a622438d80deae2823d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleLight
 --- !u!114 &1578237098 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8057741717389599653, guid: 359618e5cf5a12741911bea92f2e0dce, type: 3}
@@ -4845,6 +4878,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1810844456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7334475566471457192, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
+  m_PrefabInstance: {fileID: 6525327197347445074}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854e965bb56a622438d80deae2823d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleLight
 --- !u!4 &1827479949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7327494751861162463, guid: 79d67a86fbc21b94388a270d201102aa, type: 3}
@@ -6092,6 +6136,14 @@ PrefabInstance:
       propertyPath: _knobTop
       value: 
       objectReference: {fileID: 50156195}
+    - target: {fileID: 1859866118704503882, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
+      propertyPath: 'puzzleLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 539816849}
+    - target: {fileID: 1859866118704503882, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
+      propertyPath: 'puzzleLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1810844456}
     - target: {fileID: 1936285654065875525, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
       propertyPath: _redLight
       value: 
@@ -6904,6 +6956,14 @@ PrefabInstance:
       propertyPath: _knobTop
       value: 
       objectReference: {fileID: 898458919}
+    - target: {fileID: 8645894295767029432, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
+      propertyPath: 'puzzleLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1565792207}
+    - target: {fileID: 8645894295767029432, guid: 824ea7da26616e84c812f5299d27c4b7, type: 3}
+      propertyPath: 'puzzleLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 406985177}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

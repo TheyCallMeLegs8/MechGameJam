@@ -14,6 +14,7 @@ public class PuzzleLight : MonoBehaviour
     public bool IsOff { get; private set; }
 
     [SerializeField] public UnityEvent OnTurnLightOn = new UnityEvent();
+    [SerializeField] public UnityEvent OnTurnLightOff = new UnityEvent();
 
     private void OnValidate()
     {
@@ -31,13 +32,13 @@ public class PuzzleLight : MonoBehaviour
 
     public void Switch()
     {
-        if (IsOff)
+        if (IsOn)
         {
-            TurnOn();
+            TurnOff();
         }
         else
         {
-            TurnOff();
+            TurnOn();
         }
     }
 
@@ -56,5 +57,6 @@ public class PuzzleLight : MonoBehaviour
         IsOn = false;
         _meshRenderer.material = _offMat;
         _light.SetActive(false);
+        OnTurnLightOff.Invoke();
     }
 }

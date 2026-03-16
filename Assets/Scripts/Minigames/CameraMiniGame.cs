@@ -5,20 +5,37 @@ public class CameraMiniGame : MiniGameBase
 {
     [SerializeField] private List<PuzzleLight> _lights = new List<PuzzleLight>();
     [SerializeField] private int _startOnLights = 3;
+    private bool _canEndMinigame = true;
+
+    private int _onLights = 0;
 
     private void OnEnable()
     {
         foreach (PuzzleLight lights in _lights)
         {
-            lights.OnTurnLightOn.AddListener(CheckLights);
+            lights.OnTurnLightOn.AddListener(CheckOffLight);
+            lights.OnTurnLightOff.AddListener(CheckOffLight);
         }
+        _canEndMinigame = true;
     }
 
     private void OnDisable()
     {
         foreach (PuzzleLight lights in _lights)
         {
-            lights.OnTurnLightOn.RemoveListener(CheckLights);
+            lights.OnTurnLightOn.RemoveListener(CheckOffLight);
+            lights.OnTurnLightOff.RemoveListener(CheckOffLight);
+        }
+        _canEndMinigame = false;
+    }
+
+    private void Update()
+    {
+        // fixes glitch where you can complete it without evervy light being on
+        if(_canEndMinigame && _onLights == _lights.Count)
+        {
+            OnGameComplete.Invoke();
+            _canEndMinigame = false;
         }
     }
 
@@ -50,15 +67,37 @@ public class CameraMiniGame : MiniGameBase
 
     private void CheckLights()
     {
-        int onLights = 0;
+        _onLights = 0;
         for(int i = 0; i < _lights.Count; i++)
         {
-            if(_lights[i].IsOn) onLights++;
+            if(!_lights[i].IsOff) _onLights++;
         }
 
-        if(onLights >= _lights.Count)
+        CheckOffLight();
+    }
+
+    private void CheckOffLight()
+    {
+        _onLights = 0;
+        for (int i = 0; i < _lights.Count; i++)
         {
-            OnGameComplete.Invoke();
+            if (_lights[i].IsOn)
+            {
+                _onLights++;
+                continue;
+            }
+            else
+            {
+                _onLights--;
+                return;
+            }
         }
+    }
+
+    private void LightOff()
+    {
+        _onLights--;
+
+        CheckOffLight();
     }
 }

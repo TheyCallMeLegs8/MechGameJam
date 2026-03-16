@@ -1,13 +1,18 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Knob : MonoBehaviour, IInteractable
 {
     [SerializeField] private PuzzleLight[] puzzleLights;
     [SerializeField] private GameObject _knobTop;
 
+    [SerializeField] public UnityEvent OnInteract = new UnityEvent();
+
     public void Interact(GameObject interactor)
     {
-        foreach(PuzzleLight light in puzzleLights)
+        OnInteract.Invoke();
+
+        foreach (PuzzleLight light in puzzleLights)
         {
             light.Switch();
         }

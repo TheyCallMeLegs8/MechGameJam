@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Movement))]
 
@@ -14,6 +15,9 @@ public class MechControls : MonoBehaviour
     [SerializeField] private float _matchTorsoAndLegsSpeed = 40.0f;
     private bool _isRotating = false;
 
+    public UnityEvent OnStartMove = new UnityEvent();
+    public UnityEvent OnEndMove = new UnityEvent();
+
     private void OnValidate()
     {
         if(_movement == null) _movement = GetComponent<Movement>();
@@ -21,11 +25,13 @@ public class MechControls : MonoBehaviour
 
     public void MoveForward()
     {
+        OnStartMove.Invoke();
         _movement.SetMoveInput(_legs.transform.forward);
     }
 
     public void MoveBackward()
     {
+        OnStartMove.Invoke();
         _movement.SetMoveInput(-_legs.transform.forward);
     }
 
@@ -49,6 +55,7 @@ public class MechControls : MonoBehaviour
 
     public void StopMovement()
     {
+        OnEndMove.Invoke();
         _movement.SetMoveInput(new Vector3(0, 0, 0));
     }
 

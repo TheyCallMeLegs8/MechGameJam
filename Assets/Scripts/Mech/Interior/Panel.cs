@@ -8,6 +8,7 @@ public class Panel : MonoBehaviour, IInteractable
     [SerializeField] private Quaternion _panelTargetRot;
     [SerializeField] private float _panelSpeed = 10.0f;
     [SerializeField] private Ease _openEasing;
+    [SerializeField] private SoundPlayer _soundPlayer;
 
     private Quaternion _baseRotation;
 
@@ -45,6 +46,14 @@ public class Panel : MonoBehaviour, IInteractable
         IsBroken = isBroken;
         _redLight.SetActive(isBroken);
         _greenLight.SetActive(!isBroken);
+        if(IsBroken == true)
+        {
+            _soundPlayer.PlayAudio();
+        }
+        else
+        {
+            _soundPlayer.StopAudio();
+        }
     }
 
     public void OpenPanel()

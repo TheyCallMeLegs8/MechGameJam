@@ -110,4 +110,11 @@ public class Movement : MonoBehaviour
     {
         _speed = newSpeed;
     }
+
+    public void Teleport(Vector3 position)
+    {
+        CharacterController.enabled = false;
+        transform.position = position;
+        CharacterController.enabled = true;
+    }
 }
